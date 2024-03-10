@@ -4,7 +4,7 @@ mateable coin staging tree 24.x
 
 * for releases for macos + windows + linux
 
-* https://github.com/bitnet-io/mateablecoin-24.x coin/mateablecoin-24.x/releases/tag/linux-windows-wallet
+* https://github.com/bitnet-io/mateablecoin-24.x 
 
 
 How do I build the software?
@@ -16,7 +16,7 @@ The most troublefree and reproducable method of building the repository is via t
 
 ```
 
-    git clone https://github.com/bitnet-io/mateablecoin-24.x coin/mateablecoin-24.x
+    git clone https://github.com/bitnet-io/mateablecoin-24.x 
     cd mateablecoin-24.x
     cd depends
     make -j12 HOST=x86_64-pc-linux-gnu  # -j12 for 12 cores adjust here
@@ -33,7 +33,7 @@ The most troublefree and reproducable method of building the repository is via t
 ```
 # WINDOWS 64-bit (only build the system using Ubuntu 22.04 Debian and Fedora the win64 exe will break and not work properly)
 ```
-    git clone https://github.com/bitnet-io/mateablecoin-24.x coin/mateablecoin-24.x
+    git clone https://github.com/bitnet-io/mateablecoin-24.x 
     cd mateablecoin-24.x
 
     apt-get update -y
@@ -68,8 +68,7 @@ xcode-select --install
 brew install automake libtool boost pkg-config libevent berkeley-db@4 qt@5 qrencode \
 miniupnpc libnatpmp zeromq 
 
-git clone https://github.com/bitnet-io/mateablecoin-24.x coin/mateablecoin-24.x
-
+git clone https://github.com/bitnet-io/mateablecoin-24.x 
 cd mateablecoin-24.x
 
 ./autogen.sh
