@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2022 The Bitcoin Core developers
+# Copyright (c) 2022 The Mateable Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test signet miner tool"""
@@ -11,7 +11,7 @@ import time
 
 from test_framework.key import ECKey
 from test_framework.script_util import key_to_p2wpkh_script
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import MateableTestFramework
 from test_framework.util import assert_equal
 from test_framework.wallet_util import bytes_to_wif
 
@@ -19,7 +19,7 @@ from test_framework.wallet_util import bytes_to_wif
 CHALLENGE_PRIVATE_KEY = (42).to_bytes(32, 'big')
 
 
-class SignetMinerTest(BitcoinTestFramework):
+class SignetMinerTest(MateableTestFramework):
     def set_test_params(self):
         self.chain = "signet"
         self.setup_clean_chain = True

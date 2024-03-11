@@ -66,8 +66,8 @@
         <translation type="unfinished">Adresy ôdbiyraniŏ</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Tukej sōm adresy Bitcoin na kere posyłŏsz płaty. Dycki wybaduj wielość i adresã ôdbiyrŏcza przed posłaniym mōnet.</translation>
+        <source>These are your Mateable addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Tukej sōm adresy Mateable na kere posyłŏsz płaty. Dycki wybaduj wielość i adresã ôdbiyrŏcza przed posłaniym mōnet.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -149,8 +149,8 @@
         <translation type="unfinished">Przituplikuj szyfrowanie portmanyja</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Pozōr: jeźli zaszyfrujesz swōj portmanyj i stracisz hasło &lt;b&gt;STRACISZ WSZYJSKE SWOJE BITCOINY&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MATEABLES&lt;/b&gt;!</source>
+        <translation type="unfinished">Pozōr: jeźli zaszyfrujesz swōj portmanyj i stracisz hasło &lt;b&gt;STRACISZ WSZYJSKE SWOJE MATEABLEY&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -219,8 +219,8 @@
         <translation type="unfinished">Kwota</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation type="unfinished">Wkludź adresã Bitcoin (bp. %1)</translation>
+        <source>Enter a Mateable address (e.g. %1)</source>
+        <translation type="unfinished">Wkludź adresã Mateable (bp. %1)</translation>
     </message>
     <message>
         <source>Inbound</source>
@@ -270,7 +270,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>mateable-core</name>
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">Twōrcy %s</translation>
@@ -333,7 +333,7 @@
     </message>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>MateableGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;Podsumowanie</translation>
@@ -392,8 +392,8 @@
         <translation type="unfinished">Proxy je &lt;b&gt;zapuszczone&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">Poślij mōnety na adresã Bitcoin</translation>
+        <source>Send coins to a Mateable address</source>
+        <translation type="unfinished">Poślij mōnety na adresã Mateable</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -416,12 +416,12 @@
         <translation type="unfinished">Szyfruj klucze prywatne, kere sōm we twojim portmanyju</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Mateable addresses to prove you own them</source>
         <translation type="unfinished">Podpisz wiadōmości swojōm adresōm coby dowiyść jejich posiadanie</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation type="unfinished">Zweryfikuj wiadōmość, coby wejzdrzeć sie, iże ôstała podpisanŏ podanōm adresōm Bitcoin.</translation>
+        <source>Verify messages to ensure they were signed with specified Mateable addresses</source>
+        <translation type="unfinished">Zweryfikuj wiadōmość, coby wejzdrzeć sie, iże ôstała podpisanŏ podanōm adresōm Mateable.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -494,7 +494,7 @@
         <translation type="unfinished">&amp;Adresy posyłaniŏ</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible Mateable command-line options</source>
         <translation type="unfinished">Pokŏż pōmoc %1 coby zobŏczyć wykŏz wszyjskich ôpcyji piski nakŏzań.</translation>
     </message>
     <message>
@@ -510,7 +510,7 @@
         <translation type="unfinished">%1 klijynt</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Mateable network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -761,8 +761,8 @@
         <translation type="unfinished">Edytuj adresã posyłaniŏ</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation type="unfinished">Wkludzōnŏ adresa "%1" niyma nŏleżnōm adresōm Bitcoin.</translation>
+        <source>The entered address "%1" is not a valid Mateable address.</source>
+        <translation type="unfinished">Wkludzōnŏ adresa "%1" niyma nŏleżnōm adresōm Mateable.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -836,8 +836,8 @@
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Bitcoin block chain.</source>
-        <translation type="unfinished">%1 sebiere i spamiyntŏ kopijõ kety blokōw Bitcoin.</translation>
+        <source>%1 will download and store a copy of the Mateable block chain.</source>
+        <translation type="unfinished">%1 sebiere i spamiyntŏ kopijõ kety blokōw Mateable.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1021,8 +1021,8 @@
         <translation type="unfinished">&amp;Wydej niyprzituplowanõ wydŏwkã</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished">Autōmatycznie ôdewrzij port klijynta Bitcoin na routerze. Ta ôpcyjŏ funguje ino jeźli twōj router podpiyrŏ UPnP i je ôno zapuszczone.</translation>
+        <source>Automatically open the Mateable client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished">Autōmatycznie ôdewrzij port klijynta Mateable na routerze. Ta ôpcyjŏ funguje ino jeźli twōj router podpiyrŏ UPnP i je ôno zapuszczone.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1037,8 +1037,8 @@
         <translation type="unfinished">Zwōl na skuplowania przichodzōnce</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">Skupluj sie z necym Bitcoin bez SOCKS5 proxy.</translation>
+        <source>Connect to the Mateable network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">Skupluj sie z necym Mateable bez SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1093,7 +1093,7 @@
         <translation type="unfinished">Formular</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Mateable network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished">Wyświytlanŏ informacyjŏ może być niyterŏźnŏ. Twōj portmanyj synchrōnizuje sie autōmatycznie z necym bitcoin zarŏz po tym, jak zrychtowane je skuplowanie, ale proces tyn niy ôstoł jeszcze skōńczōny.</translation>
     </message>
     <message>
@@ -1303,8 +1303,8 @@
         <translation type="unfinished">&amp;Etyketa:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
-        <translation type="unfinished">Ôpcyjōnalnŏ wiadōmość do prziwstōniŏ do żōndaniŏ płatu, kerŏ bydzie wyświytlanŏ, kej żōndanie ôstanie ôdewrzōne. Napōmniynie: wiadōmość ta niy ôstanie wysłanŏ z płatym w nec Bitcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Mateable network.</source>
+        <translation type="unfinished">Ôpcyjōnalnŏ wiadōmość do prziwstōniŏ do żōndaniŏ płatu, kerŏ bydzie wyświytlanŏ, kej żōndanie ôstanie ôdewrzōne. Napōmniynie: wiadōmość ta niy ôstanie wysłanŏ z płatym w nec Mateable.</translation>
     </message>
     <message>
         <source>Clear</source>
@@ -1478,8 +1478,8 @@
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation type="unfinished">Pozōr: niynŏleżnŏ adresa Bitcoin</translation>
+        <source>Warning: Invalid Mateable address</source>
+        <translation type="unfinished">Pozōr: niynŏleżnŏ adresa Mateable</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1497,8 +1497,8 @@
         <translation type="unfinished">&amp;Etyketa:</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
-        <translation type="unfinished">Adresa Bitcoin, na kerõ chcesz posłać płat</translation>
+        <source>The Mateable address to send the payment to</source>
+        <translation type="unfinished">Adresa Mateable, na kerõ chcesz posłać płat</translation>
     </message>
     <message>
         <source>Use available balance</source>
@@ -1509,8 +1509,8 @@
         <translation type="unfinished">Wiadōmość:</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation type="unfinished">Wiadōmość, kerŏ ôstała prziwstōnŏ do URI bitcoin:, kerŏ bydzie przechowowanŏ z transakcyjōm w cylach informacyjnych. Napōmniynie: Ta wiadōmość niy bydzie rozszyrzowanŏ w necu Bitcoin.</translation>
+        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Mateable network.</source>
+        <translation type="unfinished">Wiadōmość, kerŏ ôstała prziwstōnŏ do URI bitcoin:, kerŏ bydzie przechowowanŏ z transakcyjōm w cylach informacyjnych. Napōmniynie: Ta wiadōmość niy bydzie rozszyrzowanŏ w necu Mateable.</translation>
     </message>
 </context>
 <context>

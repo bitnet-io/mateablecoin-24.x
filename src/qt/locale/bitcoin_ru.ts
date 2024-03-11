@@ -66,11 +66,11 @@
         <translation type="unfinished">Адреса получения</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Mateable addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">Это ваши биткоин-адреса для отправки платежей. Всегда проверяйте сумму и адрес получателя перед отправкой перевода.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Mateable addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Это ваши биткоин-адреса для приема платежей. Используйте кнопку "Создать новый адрес получения" на вкладке получения, чтобы создать новые адреса.
 Подпись возможна только с адресами типа "устаревший".</translation>
@@ -164,7 +164,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Подтвердите шифрование кошелька</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MATEABLES&lt;/b&gt;!</source>
         <translation type="unfinished">Предупреждение: если вы зашифруете кошелёк и потеряете парольную фразу, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ БИТКОИНЫ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -244,7 +244,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>MateableApplication</name>
     <message>
         <source>Settings file %1 might be corrupt or invalid.</source>
         <translation type="unfinished">Файл настроек %1 повреждён или имеет неверный формат.</translation>
@@ -304,7 +304,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Сумма</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a Mateable address (e.g. %1)</source>
         <translation type="unfinished">Введите биткоин-адрес (например,%1)</translation>
     </message>
     <message>
@@ -448,7 +448,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>mateable-core</name>
     <message>
         <source>Settings file could not be read</source>
         <translation type="unfinished">Файл настроек не может быть прочитан</translation>
@@ -462,8 +462,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Разработчики %s</translation>
     </message>
     <message>
-        <source>%s corrupt. Try using the wallet tool bitcoin-wallet to salvage or restoring a backup.</source>
-        <translation type="unfinished">%s испорчен. Попробуйте восстановить его с помощью инструмента bitcoin-wallet или из резервной копии.</translation>
+        <source>%s corrupt. Try using the wallet tool mateable-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s испорчен. Попробуйте восстановить его с помощью инструмента mateable-wallet или из резервной копии.</translation>
     </message>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
@@ -502,7 +502,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Ошибка: запись идентификатора дамп-файла неверна. Обнаружено "%s", ожидалось "%s".</translation>
     </message>
     <message>
-        <source>Error: Dumpfile version is not supported. This version of bitcoin-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
+        <source>Error: Dumpfile version is not supported. This version of mateable-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
         <translation type="unfinished">Ошибка: версия дамп-файла не поддерживается. Эта версия биткоин-кошелька поддерживает только дамп-файлы версии 1. Обнаружен дамп-файл версии %s</translation>
     </message>
     <message>
@@ -670,8 +670,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Обновление -txindex, запущенное при предыдущей версии не может быть завершено. Перезапустите с предыдущей версией или запустите весь процесс заново с ключом -reindex.</translation>
     </message>
     <message>
-        <source>%s request to listen on port %u. This port is considered "bad" and thus it is unlikely that any Bitcoin Core peers connect to it. See doc/p2p-bad-ports.md for details and a full list.</source>
-        <translation type="unfinished">%s попытался открыть на прослушивание порт %u. Этот порт считается "плохим". Вероятность, что узлы Bitcoin Core к нему подключатся, крайне мала. Подробности и полный список плохих портов в документации: doc/p2p-bad-ports.md. </translation>
+        <source>%s request to listen on port %u. This port is considered "bad" and thus it is unlikely that any Mateable Core peers connect to it. See doc/p2p-bad-ports.md for details and a full list.</source>
+        <translation type="unfinished">%s попытался открыть на прослушивание порт %u. Этот порт считается "плохим". Вероятность, что узлы Mateable Core к нему подключатся, крайне мала. Подробности и полный список плохих портов в документации: doc/p2p-bad-ports.md. </translation>
     </message>
     <message>
         <source>-reindex-chainstate option is not compatible with -blockfilterindex. Please temporarily disable blockfilterindex while using -reindex-chainstate, or replace -reindex-chainstate with -reindex to fully rebuild all indexes.</source>
@@ -1247,7 +1247,7 @@ Unable to restore backup of wallet.</source>
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>MateableGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;Обзор</translation>
@@ -1314,7 +1314,7 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">Прокси &lt;b&gt;включён&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
+        <source>Send coins to a Mateable address</source>
         <translation type="unfinished">Отправить средства на биткоин-адрес</translation>
     </message>
     <message>
@@ -1358,7 +1358,7 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">Подписать &amp;сообщение…</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Mateable addresses to prove you own them</source>
         <translation type="unfinished">Подписать сообщение биткоин-адресом, чтобы доказать, что вы им владеете</translation>
     </message>
     <message>
@@ -1366,7 +1366,7 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">&amp;Проверить сообщение…</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Mateable addresses</source>
         <translation type="unfinished">Проверить подпись сообщения, чтобы убедиться, что оно подписано конкретным биткоин-адресом</translation>
     </message>
     <message>
@@ -1486,7 +1486,7 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">Синхронизированно</translation>
     </message>
     <message>
-        <source>Load Partially Signed Bitcoin Transaction</source>
+        <source>Load Partially Signed Mateable Transaction</source>
         <translation type="unfinished">Загрузить частично подписанную биткоин-транзакцию (PSBT)</translation>
     </message>
     <message>
@@ -1494,7 +1494,7 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">Загрузить PSBT из &amp;буфера обмена…</translation>
     </message>
     <message>
-        <source>Load Partially Signed Bitcoin Transaction from clipboard</source>
+        <source>Load Partially Signed Mateable Transaction from clipboard</source>
         <translation type="unfinished">Загрузить частично подписанную биткоин-транзакцию из буфера обмена</translation>
     </message>
     <message>
@@ -1544,7 +1544,7 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">Закрыть все кошельки</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible Mateable command-line options</source>
         <translation type="unfinished">Показать справку %1 со списком доступных параметров командной строки</translation>
     </message>
     <message>
@@ -1608,12 +1608,12 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">&amp;Показать</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Mateable network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>%n активное подключение к сети Bitcoin.</numerusform>
-            <numerusform>%n активных подключения к сети Bitcoin.</numerusform>
-            <numerusform>%n активных подключений к сети Bitcoin.</numerusform>
+            <numerusform>%n активное подключение к сети Mateable.</numerusform>
+            <numerusform>%n активных подключения к сети Mateable.</numerusform>
+            <numerusform>%n активных подключений к сети Mateable.</numerusform>
         </translation>
     </message>
     <message>
@@ -2104,7 +2104,7 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">Изменить адрес отправки</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
+        <source>The entered address "%1" is not a valid Mateable address.</source>
         <translation type="unfinished">Введенный адрес "%1" не является действительным биткоин-адресом.</translation>
     </message>
     <message>
@@ -2191,8 +2191,8 @@ Unable to restore backup of wallet.</source>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Bitcoin block chain.</source>
-        <translation type="unfinished">%1 скачает и сохранит копию цепочки блоков Bitcoin.</translation>
+        <source>%1 will download and store a copy of the Mateable block chain.</source>
+        <translation type="unfinished">%1 скачает и сохранит копию цепочки блоков Mateable.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -2285,7 +2285,7 @@ Unable to restore backup of wallet.</source>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
-        <translation type="unfinished">Недавние транзакции могут быть пока не видны, и поэтому отображаемый баланс вашего кошелька может быть неверным. Информация станет верной после завершения синхронизации с сетью Bitcoin. Прогресс синхронизации вы можете видеть снизу.</translation>
+        <translation type="unfinished">Недавние транзакции могут быть пока не видны, и поэтому отображаемый баланс вашего кошелька может быть неверным. Информация станет верной после завершения синхронизации с сетью Mateable. Прогресс синхронизации вы можете видеть снизу.</translation>
     </message>
     <message>
         <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -2507,11 +2507,11 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">&amp;Внешний скрипт для подписи</translation>
     </message>
     <message>
-        <source>Full path to a Bitcoin Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
-        <translation type="unfinished">Путь к скрипту, совместимому с Bitcoin Core (напр. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Внимание: остерегайтесь вредоносных скриптов!</translation>
+        <source>Full path to a Mateable Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
+        <translation type="unfinished">Путь к скрипту, совместимому с Mateable Core (напр. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Внимание: остерегайтесь вредоносных скриптов!</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Mateable client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished">Автоматически открыть порт биткоин-клиента на маршрутизаторе. Работает, если ваш маршрутизатор поддерживает UPnP, и данная функция на нём включена.</translation>
     </message>
     <message>
@@ -2519,7 +2519,7 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">Пробросить порт через &amp;UPnP</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <source>Automatically open the Mateable client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
         <translation type="unfinished">Автоматически открыть порт биткоин-клиента на роутере. Сработает только если ваш роутер поддерживает NAT-PMP, и данная функция на нём включена. Внешний порт может быть случайным.</translation>
     </message>
     <message>
@@ -2535,8 +2535,8 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">Разрешить &amp;входящие соединения</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">Подключиться к сети Bitcoin через SOCKS5 прокси.</translation>
+        <source>Connect to the Mateable network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">Подключиться к сети Mateable через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -2615,8 +2615,8 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">Показывать параметры управления монетами.</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a separate SOCKS5 proxy for Tor onion services.</source>
-        <translation type="unfinished">Подключаться к сети Bitcoin через отдельный SOCKS5 прокси для скрытых сервисов Tor.</translation>
+        <source>Connect to the Mateable network through a separate SOCKS5 proxy for Tor onion services.</source>
+        <translation type="unfinished">Подключаться к сети Mateable через отдельный SOCKS5 прокси для скрытых сервисов Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</source>
@@ -2724,8 +2724,8 @@ Unable to restore backup of wallet.</source>
         <translation type="unfinished">Форма</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished">Отображаемая информация может быть устаревшей. Ваш кошелёк автоматически синхронизируется с сетью Bitcoin после подключения, и этот процесс пока не завершён.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Mateable network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished">Отображаемая информация может быть устаревшей. Ваш кошелёк автоматически синхронизируется с сетью Mateable после подключения, и этот процесс пока не завершён.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -2955,7 +2955,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
 Если вы получили эту ошибку, вам следует попросить у продавца URI, совместимый с BIP21.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Mateable address or malformed URI parameters.</source>
         <translation type="unfinished">Не удалось обработать URI! Это может быть вызвано тем, что биткоин-адрес неверен или параметры URI сформированы неправильно.</translation>
     </message>
     <message>
@@ -3517,8 +3517,8 @@ For more information on using this console, type %6.
         <translation type="unfinished">&amp;Сообщение:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
-        <translation type="unfinished">Необязательное сообщение для запроса платежа, которое будет показано при открытии запроса. Внимание: это сообщение не будет отправлено вместе с платежом через сеть Bitcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Mateable network.</source>
+        <translation type="unfinished">Необязательное сообщение для запроса платежа, которое будет показано при открытии запроса. Внимание: это сообщение не будет отправлено вместе с платежом через сеть Mateable.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -3892,7 +3892,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Создать &amp;без подписи</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Bitcoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Creates a Partially Signed Mateable Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation type="unfinished">Создает частично подписанную биткоин-транзакцию (PSBT), чтобы использовать её, например, с офлайновым кошельком %1, или PSBT-совместимым аппаратным кошельком.</translation>
     </message>
     <message>
@@ -3951,7 +3951,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Вы можете увеличить комиссию позже (используется Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Bitcoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Mateable Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
         <translation type="unfinished">Пожалуйста, проверьте черновик вашей транзакции. Будет создана частично подписанная биткоин-транзакция (PSBT), которую можно сохранить или скопировать, после чего подписать, например, офлайновым кошельком %1 или PSBT-совместимым аппаратным кошельком.</translation>
     </message>
@@ -3961,7 +3961,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Вы хотите создать эту транзакцию?</translation>
     </message>
     <message>
-        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Bitcoin Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Please, review your transaction. You can create and send this transaction or create a Partially Signed Mateable Transaction (PSBT), which you can save or copy and then sign with, e.g., an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can send their transaction or create a PSBT. This string is displayed when both private keys and PSBT controls are enabled.</extracomment>
         <translation type="unfinished">Пожалуйста, проверьте вашу транзакцию. Вы можете создать и отправить эту транзакцию, либо создать частично подписанную биткоин-транзакцию (PSBT), которую можно сохранить или скопировать, после чего подписать, например, офлайновым кошельком %1 или PSBT-совместимым аппаратным кошельком.</translation>
     </message>
@@ -4027,7 +4027,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
+        <source>Warning: Invalid Mateable address</source>
         <translation type="unfinished">Внимание: неверный биткоин-адрес</translation>
     </message>
     <message>
@@ -4066,7 +4066,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Выбрать ранее использованный адрес</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
+        <source>The Mateable address to send the payment to</source>
         <translation type="unfinished">Биткоин-адрес, на который нужно отправить платёж</translation>
     </message>
     <message>
@@ -4102,8 +4102,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Введите метку для этого адреса, чтобы добавить его в список использованных адресов</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation type="unfinished">Сообщение, которое было прикреплено к URI. Оно будет сохранено вместе с транзакцией для вашего удобства. Обратите внимание: это сообщение не будет отправлено в сеть Bitcoin.</translation>
+        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Mateable network.</source>
+        <translation type="unfinished">Сообщение, которое было прикреплено к URI. Оно будет сохранено вместе с транзакцией для вашего удобства. Обратите внимание: это сообщение не будет отправлено в сеть Mateable.</translation>
     </message>
 </context>
 <context>
@@ -4132,7 +4132,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Вы можете подписывать сообщения/соглашения своими адресами, чтобы доказать, что вы можете получать биткоины на них. Будьте осторожны и не подписывайте непонятные или случайные сообщения, так как мошенники могут таким образом пытаться присвоить вашу личность. Подписывайте только такие сообщения, с которыми вы согласны вплоть до мелочей.</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
+        <source>The Mateable address to sign the message with</source>
         <translation type="unfinished">Биткоин-адрес, которым подписать сообщение</translation>
     </message>
     <message>
@@ -4156,7 +4156,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Скопировать текущую подпись в буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
+        <source>Sign the message to prove you own this Mateable address</source>
         <translation type="unfinished">Подписать сообщение, чтобы доказать владение биткоин-адресом</translation>
     </message>
     <message>
@@ -4180,7 +4180,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Введите ниже адрес получателя, сообщение (убедитесь, что переводы строк, пробелы, знаки табуляции и т.п. скопированы в точности) и подпись, чтобы проверить сообщение. Не придавайте сообщению большего смысла, чем в нём содержится, чтобы не стать жертвой атаки "человек посередине". Обратите внимание, что подпись доказывает лишь то, что подписавший может получать биткоины на этот адрес, но никак не то, что он отправил какую-либо транзакцию!</translation>
     </message>
     <message>
-        <source>The Bitcoin address the message was signed with</source>
+        <source>The Mateable address the message was signed with</source>
         <translation type="unfinished">Биткоин-адрес, которым было подписано сообщение</translation>
     </message>
     <message>
@@ -4192,7 +4192,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Подпись, созданная при подписании сообщения</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Mateable address</source>
         <translation type="unfinished">Проверить сообщение, чтобы убедиться, что оно действительно подписано указанным биткоин-адресом</translation>
     </message>
     <message>

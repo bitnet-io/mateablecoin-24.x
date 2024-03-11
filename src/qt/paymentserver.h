@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2020 The Bitcoin Core developers
+// Copyright (c) 2011-2020 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_PAYMENTSERVER_H
-#define BITCOIN_QT_PAYMENTSERVER_H
+#ifndef MATEABLE_QT_PAYMENTSERVER_H
+#define MATEABLE_QT_PAYMENTSERVER_H
 
 // This class handles payment requests from clicking on
 // bitcoin: URIs
@@ -33,7 +33,7 @@
 //
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/mateable-config.h>
 #endif
 
 #include <qt/sendcoinsrecipient.h>
@@ -106,4 +106,4 @@ private:
     OptionsModel *optionsModel;
 };
 
-#endif // BITCOIN_QT_PAYMENTSERVER_H
+#endif // MATEABLE_QT_PAYMENTSERVER_H

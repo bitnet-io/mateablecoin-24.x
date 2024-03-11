@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2021 The Bitcoin Core developers
+// Copyright (c) 2009-2021 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_NODE_MINER_H
-#define BITCOIN_NODE_MINER_H
+#ifndef MATEABLE_NODE_MINER_H
+#define MATEABLE_NODE_MINER_H
 
 #include <multialgo.h>
 #include <primitives/block.h>
@@ -201,4 +201,4 @@ int64_t UpdateTime(CBlockHeader* pblock, const Consensus::Params& consensusParam
 void RegenerateCommitments(CBlock& block, ChainstateManager& chainman);
 } // namespace node
 
-#endif // BITCOIN_NODE_MINER_H
+#endif // MATEABLE_NODE_MINER_H

@@ -66,7 +66,7 @@
         <translation type="unfinished">प्राप्त गर्ने ठेगानाहरू...</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Mateable addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">यी भुक्तानी गर्नका लागि तपाइका बिट्कोइन ठेगानाहरू हुन्। सिक्काहरू पठाउनुअघि रकम र प्राप्त गर्ने ठेगाना जाँच गर्नुहोस।</translation>
     </message>
     <message>
@@ -172,7 +172,7 @@
         <translation type="unfinished">रकम</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
+        <source>Enter a Mateable address (e.g. %1)</source>
         <translation type="unfinished">कृपया बिटकोइन ठेगाना प्रवेश गर्नुहोस् (उदाहरण %1)</translation>
     </message>
     <message numerus="yes">
@@ -219,7 +219,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>mateable-core</name>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s' (must be at least the minrelay fee of %s to prevent stuck transactions)</source>
         <translation type="unfinished">maxtxfee=&amp;lt;रकम&amp;gt;: का लागि अमान्य रकम &amp;apos;%s&amp;apos; (कारोबारलाई अड्कन नदिन अनिवार्य रूपमा कम्तिमा %s को न्यूनतम रिले शुल्क हुनु पर्छ)</translation>
@@ -278,7 +278,7 @@
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>MateableGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">शारांश</translation>
@@ -324,7 +324,7 @@
         <translation type="unfinished">%1 का लागि कन्फिगुरेसनको विकल्प परिमार्जन गर्नुहोस</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
+        <source>Send coins to a Mateable address</source>
         <translation type="unfinished">बिटकोइन ठेगानामा सिक्का पठाउनुहोस्</translation>
     </message>
     <message>
@@ -343,7 +343,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Mateable network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -400,7 +400,7 @@
 <context>
     <name>OverviewPage</name>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Mateable network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished">देखाइएको सूचना पूरानो हुन सक्छ । कनेक्सन स्थापित भएपछि, तपाईंको वालेट बिटकोइन नेटवर्कमा स्वचालित रूपमा समिकरण हुन्छ , तर यो प्रक्रिया अहिले सम्म पूरा भएको छैन ।</translation>
     </message>
     <message>
@@ -500,7 +500,7 @@
         <translation type="unfinished">यो ठेगानालाई प्रयोग गरिएको ठेगानाको सूचीमा थप्न एउटा लेबल प्रविष्ट गर्नुहोस्</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Mateable network.</source>
         <translation type="unfinished">बिटकोइनमा संलग्न गरिएको सन्देश: तपाईंको मध्यस्थको लागि कारोबारको साथमा भण्डारण गरिने URI । नोट: यो सन्देश बिटकोइन नेटवर्क मार्फत पठाइने छैन ।</translation>
     </message>
 </context>

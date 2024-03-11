@@ -1,9 +1,9 @@
-// Copyright (c) 2022 The Bitcoin Core developers
+// Copyright (c) 2022 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_NODE_VALIDATION_CACHE_ARGS_H
-#define BITCOIN_NODE_VALIDATION_CACHE_ARGS_H
+#ifndef MATEABLE_NODE_VALIDATION_CACHE_ARGS_H
+#define MATEABLE_NODE_VALIDATION_CACHE_ARGS_H
 
 class ArgsManager;
 namespace kernel {
@@ -14,4 +14,4 @@ namespace node {
 void ApplyArgsManOptions(const ArgsManager& argsman, kernel::ValidationCacheSizes& cache_sizes);
 } // namespace node
 
-#endif // BITCOIN_NODE_VALIDATION_CACHE_ARGS_H
+#endif // MATEABLE_NODE_VALIDATION_CACHE_ARGS_H

@@ -66,13 +66,13 @@
         <translation type="unfinished">Mottagaradresser</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Detta är dina Bitcoin-adresser för att skicka betalningar. Kontrollera alltid belopp och mottagaradress innan du skickar bitcoin.</translation>
+        <source>These are your Mateable addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Detta är dina Mateable-adresser för att skicka betalningar. Kontrollera alltid belopp och mottagaradress innan du skickar bitcoin.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Mateable addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Detta är dina Bitcoinadresser för att ta emot betalningar. Använd knappen 'Skapa ny mottagaradress' i mottagsfliken för att skapa nya adresser. Signering är bara tillgänglig för adresser av typen 'legacy'</translation>
+        <translation type="unfinished">Detta är dina Mateableadresser för att ta emot betalningar. Använd knappen 'Skapa ny mottagaradress' i mottagsfliken för att skapa nya adresser. Signering är bara tillgänglig för adresser av typen 'legacy'</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -164,8 +164,8 @@ Försök igen.</translation>
         <translation type="unfinished">Bekräfta kryptering av plånbok</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">VARNING: Om du krypterar din plånbok och glömmer din lösenfras, &lt;b&gt;FÖRLORAR DU ALLA DINA BITCOIN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MATEABLES&lt;/b&gt;!</source>
+        <translation type="unfinished">VARNING: Om du krypterar din plånbok och glömmer din lösenfras, &lt;b&gt;FÖRLORAR DU ALLA DINA MATEABLE&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -244,7 +244,7 @@ Försök igen.</translation>
     </message>
 </context>
 <context>
-    <name>BitcoinApplication</name>
+    <name>MateableApplication</name>
     <message>
         <source>Internal error</source>
         <translation type="unfinished">Internt fel</translation>
@@ -286,8 +286,8 @@ Försök igen.</translation>
         <translation type="unfinished">Belopp</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation type="unfinished">Ange en Bitcoin-adress (t.ex. %1)</translation>
+        <source>Enter a Mateable address (e.g. %1)</source>
+        <translation type="unfinished">Ange en Mateable-adress (t.ex. %1)</translation>
     </message>
     <message>
         <source>Internal</source>
@@ -364,7 +364,7 @@ Försök igen.</translation>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>mateable-core</name>
     <message>
         <source>Settings file could not be read</source>
         <translation type="unfinished">Filen för inställningar kunde inte läsas</translation>
@@ -378,8 +378,8 @@ Försök igen.</translation>
         <translation type="unfinished">%s-utvecklarna</translation>
     </message>
     <message>
-        <source>%s corrupt. Try using the wallet tool bitcoin-wallet to salvage or restoring a backup.</source>
-        <translation type="unfinished">%s är korrupt. Testa att använda verktyget bitcoin-wallet för att rädda eller återställa en backup.</translation>
+        <source>%s corrupt. Try using the wallet tool mateable-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s är korrupt. Testa att använda verktyget mateable-wallet för att rädda eller återställa en backup.</translation>
     </message>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
@@ -843,7 +843,7 @@ Försök igen.</translation>
     </message>
 </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>MateableGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation type="unfinished">&amp;Översikt</translation>
@@ -910,8 +910,8 @@ Försök igen.</translation>
         <translation type="unfinished">Proxy är &lt;b&gt; aktiverad &lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation type="unfinished">Skicka bitcoin till en Bitcoin-adress</translation>
+        <source>Send coins to a Mateable address</source>
+        <translation type="unfinished">Skicka bitcoin till en Mateable-adress</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -954,16 +954,16 @@ Försök igen.</translation>
         <translation type="unfinished">Signera &amp;meddelandet...</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation type="unfinished">Signera meddelanden med dina Bitcoin-adresser för att bevisa att du äger dem</translation>
+        <source>Sign messages with your Mateable addresses to prove you own them</source>
+        <translation type="unfinished">Signera meddelanden med dina Mateable-adresser för att bevisa att du äger dem</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
         <translation type="unfinished">&amp;Bekräfta meddelandet…</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation type="unfinished">Verifiera meddelanden för att vara säker på att de signerades med angivna Bitcoin-adresser</translation>
+        <source>Verify messages to ensure they were signed with specified Mateable addresses</source>
+        <translation type="unfinished">Verifiera meddelanden för att vara säker på att de signerades med angivna Mateable-adresser</translation>
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -1077,16 +1077,16 @@ Försök igen.</translation>
         <translation type="unfinished">Uppdaterad</translation>
     </message>
     <message>
-        <source>Load Partially Signed Bitcoin Transaction</source>
-        <translation type="unfinished">Läs in Delvis signerad Bitcoin transaktion (PSBT)</translation>
+        <source>Load Partially Signed Mateable Transaction</source>
+        <translation type="unfinished">Läs in Delvis signerad Mateable transaktion (PSBT)</translation>
     </message>
     <message>
         <source>Load PSBT from &amp;clipboard…</source>
         <translation type="unfinished">Ladda PSBT från &amp;urklipp...</translation>
     </message>
     <message>
-        <source>Load Partially Signed Bitcoin Transaction from clipboard</source>
-        <translation type="unfinished">Läs in Delvis signerad Bitcoin transaktion (PSBT) från urklipp</translation>
+        <source>Load Partially Signed Mateable Transaction from clipboard</source>
+        <translation type="unfinished">Läs in Delvis signerad Mateable transaktion (PSBT) från urklipp</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -1135,8 +1135,8 @@ Försök igen.</translation>
         <translation type="unfinished">Stäng alla plånböcker</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
-        <translation type="unfinished">Visa %1 hjälpmeddelande för att få en lista med möjliga Bitcoin kommandoradsalternativ.</translation>
+        <source>Show the %1 help message to get a list with possible Mateable command-line options</source>
+        <translation type="unfinished">Visa %1 hjälpmeddelande för att få en lista med möjliga Mateable kommandoradsalternativ.</translation>
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -1190,7 +1190,7 @@ Försök igen.</translation>
         <translation type="unfinished">och göm</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network.</source>
+        <source>%n active connection(s) to Mateable network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -1625,8 +1625,8 @@ Försök igen.</translation>
         <translation type="unfinished">Redigera avsändaradress</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation type="unfinished">Den angivna adressen "%1" är inte en giltig Bitcoin-adress.</translation>
+        <source>The entered address "%1" is not a valid Mateable address.</source>
+        <translation type="unfinished">Den angivna adressen "%1" är inte en giltig Mateable-adress.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -1708,8 +1708,8 @@ Försök igen.</translation>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Bitcoin block chain.</source>
-        <translation type="unfinished">%1 kommer att ladda ner och lagra en kopia av Bitcoins blockkedja.</translation>
+        <source>%1 will download and store a copy of the Mateable block chain.</source>
+        <translation type="unfinished">%1 kommer att ladda ner och lagra en kopia av Mateables blockkedja.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1794,7 +1794,7 @@ Försök igen.</translation>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
-        <translation type="unfinished">Nyligen gjorda transaktioner visas inte korrekt och därför kan din plånboks saldo visas felaktigt. Denna information kommer att visas korrekt så snart din plånbok har synkroniserats med Bitcoin-nätverket enligt informationen nedan.</translation>
+        <translation type="unfinished">Nyligen gjorda transaktioner visas inte korrekt och därför kan din plånboks saldo visas felaktigt. Denna information kommer att visas korrekt så snart din plånbok har synkroniserats med Mateable-nätverket enligt informationen nedan.</translation>
     </message>
     <message>
         <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -1837,7 +1837,7 @@ Försök igen.</translation>
     <name>OpenURIDialog</name>
     <message>
         <source>Open bitcoin URI</source>
-        <translation type="unfinished">Öppna bitcoin-URI</translation>
+        <translation type="unfinished">Öppna mateable-URI</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -1947,16 +1947,16 @@ Försök igen.</translation>
         <translation type="unfinished">Aktivera &amp;PSBT-kontroll</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation type="unfinished">Öppna automatiskt Bitcoin-klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är är aktiverat.</translation>
+        <source>Automatically open the Mateable client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished">Öppna automatiskt Mateable-klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är är aktiverat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation type="unfinished">Tilldela port med hjälp av &amp;UPnP</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
-        <translation type="unfinished">Öppna automatiskt Bitcoin-klientens port på routern. Detta fungerar endast om din router stödjer NAT-PMP och det är är aktiverat. Den externa porten kan vara slumpmässig.</translation>
+        <source>Automatically open the Mateable client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <translation type="unfinished">Öppna automatiskt Mateable-klientens port på routern. Detta fungerar endast om din router stödjer NAT-PMP och det är är aktiverat. Den externa porten kan vara slumpmässig.</translation>
     </message>
     <message>
         <source>Accept connections from outside.</source>
@@ -1967,8 +1967,8 @@ Försök igen.</translation>
         <translation type="unfinished">Tillåt inkommande anslutningar</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">Anslut till Bitcoin-nätverket genom en SOCKS5-proxy.</translation>
+        <source>Connect to the Mateable network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">Anslut till Mateable-nätverket genom en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -2031,8 +2031,8 @@ Försök igen.</translation>
         <translation type="unfinished">Om myntkontrollfunktioner skall visas eller inte</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a separate SOCKS5 proxy for Tor onion services.</source>
-        <translation type="unfinished">Anslut till Bitcoin-nätverket genom en separat SOCKS5-proxy för onion-tjänster genom Tor.</translation>
+        <source>Connect to the Mateable network through a separate SOCKS5 proxy for Tor onion services.</source>
+        <translation type="unfinished">Anslut till Mateable-nätverket genom en separat SOCKS5-proxy för onion-tjänster genom Tor.</translation>
     </message>
     <message>
         <source>&amp;Cancel</source>
@@ -2103,8 +2103,8 @@ Försök igen.</translation>
         <translation type="unfinished">Formulär</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation type="unfinished">Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med Bitcoin-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Mateable network after a connection is established, but this process has not completed yet.</source>
+        <translation type="unfinished">Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med Mateable-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -2289,8 +2289,8 @@ Försök igen.</translation>
         <translation type="unfinished">'bitcoin://' är inte en accepterad URI. Använd 'bitcoin:' istället.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation type="unfinished">URI kan inte parsas! Detta kan orsakas av en ogiltig Bitcoin-adress eller felaktiga URI-parametrar.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Mateable address or malformed URI parameters.</source>
+        <translation type="unfinished">URI kan inte parsas! Detta kan orsakas av en ogiltig Mateable-adress eller felaktiga URI-parametrar.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -2686,8 +2686,8 @@ Försök igen.</translation>
         <translation type="unfinished">&amp;Meddelande:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
-        <translation type="unfinished">Ett valfritt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. Obs: Meddelandet kommer inte att sändas med betalningen över Bitcoin-nätverket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Mateable network.</source>
+        <translation type="unfinished">Ett valfritt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. Obs: Meddelandet kommer inte att sändas med betalningen över Mateable-nätverket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2848,7 +2848,7 @@ Försök igen.</translation>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation type="unfinished">Skicka Bitcoins</translation>
+        <translation type="unfinished">Skicka Mateables</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -3019,8 +3019,8 @@ Försök igen.</translation>
         <translation type="unfinished">Sk&amp;apa Osignerad</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Bitcoin Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Skapar en delvis signerad Bitcoin transaktion (PSBT) att använda vid t.ex. en offline %1 plånbok, eller en PSBT-kompatibel hårdvaruplånbok.</translation>
+        <source>Creates a Partially Signed Mateable Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <translation type="unfinished">Skapar en delvis signerad Mateable transaktion (PSBT) att använda vid t.ex. en offline %1 plånbok, eller en PSBT-kompatibel hårdvaruplånbok.</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -3055,9 +3055,9 @@ Försök igen.</translation>
         <translation type="unfinished">Du kan höja avgiften senare (signalerar Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Bitcoin Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Mateable Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <extracomment>Text to inform a user attempting to create a transaction of their current options. At this stage, a user can only create a PSBT. This string is displayed when private keys are disabled and an external signer is not available.</extracomment>
-        <translation type="unfinished">Verifiera ditt transaktionsförslag. Det kommer skapas en delvis signerad Bitcoin transaktion (PSBT) som du kan spara eller kopiera och sen signera med t.ex. en offline %1 plånbok, eller en PSBT-kompatibel hårdvaruplånbok.</translation>
+        <translation type="unfinished">Verifiera ditt transaktionsförslag. Det kommer skapas en delvis signerad Mateable transaktion (PSBT) som du kan spara eller kopiera och sen signera med t.ex. en offline %1 plånbok, eller en PSBT-kompatibel hårdvaruplånbok.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -3116,8 +3116,8 @@ Försök igen.</translation>
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation type="unfinished">Varning: Ogiltig Bitcoin-adress</translation>
+        <source>Warning: Invalid Mateable address</source>
+        <translation type="unfinished">Varning: Ogiltig Mateable-adress</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -3155,8 +3155,8 @@ Försök igen.</translation>
         <translation type="unfinished">Välj tidigare använda adresser</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
-        <translation type="unfinished">Bitcoin-adress att sända betalning till</translation>
+        <source>The Mateable address to send the payment to</source>
+        <translation type="unfinished">Mateable-adress att sända betalning till</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -3191,8 +3191,8 @@ Försök igen.</translation>
         <translation type="unfinished">Ange en etikett för denna adress för att lägga till den i listan med använda adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation type="unfinished">Ett meddelande som bifogades bitcoin: -URIn och som sparas med transaktionen som referens. Obs: Meddelandet sänds inte över Bitcoin-nätverket.</translation>
+        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Mateable network.</source>
+        <translation type="unfinished">Ett meddelande som bifogades bitcoin: -URIn och som sparas med transaktionen som referens. Obs: Meddelandet sänds inte över Mateable-nätverket.</translation>
     </message>
 </context>
 <context>
@@ -3221,8 +3221,8 @@ Försök igen.</translation>
         <translation type="unfinished">Du kan signera meddelanden/avtal med dina adresser för att bevisa att du kan ta emot bitcoin som skickats till dem. Var försiktig så du inte signerar något oklart eller konstigt, eftersom phishing-angrepp kan försöka få dig att signera över din identitet till dem. Signera endast väldetaljerade meddelanden som du godkänner.</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
-        <translation type="unfinished">Bitcoin-adress att signera meddelandet med</translation>
+        <source>The Mateable address to sign the message with</source>
+        <translation type="unfinished">Mateable-adress att signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3245,8 +3245,8 @@ Försök igen.</translation>
         <translation type="unfinished">Kopiera signaturen till systemets Urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation type="unfinished">Signera meddelandet för att bevisa att du äger denna Bitcoin-adress</translation>
+        <source>Sign the message to prove you own this Mateable address</source>
+        <translation type="unfinished">Signera meddelandet för att bevisa att du äger denna Mateable-adress</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3269,8 +3269,8 @@ Försök igen.</translation>
         <translation type="unfinished">Ange mottagarens adress, meddelande (kopiera radbrytningar, mellanslag, TAB-tecken, osv. exakt) och signatur nedan, för att verifiera meddelandet. Undvik att läsa in mera information i signaturen än vad som stod i själva det signerade meddelandet, för att undvika ett man-in-the-middle-angrepp. Notera att detta endast bevisar att den signerande parten tar emot med adressen, det bevisar inte vem som skickat transaktionen!</translation>
     </message>
     <message>
-        <source>The Bitcoin address the message was signed with</source>
-        <translation type="unfinished">Bitcoin-adress som meddelandet signerades med</translation>
+        <source>The Mateable address the message was signed with</source>
+        <translation type="unfinished">Mateable-adress som meddelandet signerades med</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -3281,8 +3281,8 @@ Försök igen.</translation>
         <translation type="unfinished">Signatur när meddelandet signerades</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation type="unfinished">Verifiera meddelandet för att vara säker på att det signerades med angiven Bitcoin-adress</translation>
+        <source>Verify the message to ensure it was signed with the specified Mateable address</source>
+        <translation type="unfinished">Verifiera meddelandet för att vara säker på att det signerades med angiven Mateable-adress</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3791,7 +3791,7 @@ Gå till Fil &gt; Öppna plånbok för att läsa in en plånbok.
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation type="unfinished">Skicka Bitcoins</translation>
+        <translation type="unfinished">Skicka Mateables</translation>
     </message>
     <message>
         <source>Fee bump error</source>

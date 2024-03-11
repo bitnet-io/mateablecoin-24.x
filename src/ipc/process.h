@@ -1,9 +1,9 @@
-// Copyright (c) 2021 The Bitcoin Core developers
+// Copyright (c) 2021 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_IPC_PROCESS_H
-#define BITCOIN_IPC_PROCESS_H
+#ifndef MATEABLE_IPC_PROCESS_H
+#define MATEABLE_IPC_PROCESS_H
 
 #include <memory>
 #include <string>
@@ -39,4 +39,4 @@ public:
 std::unique_ptr<Process> MakeProcess();
 } // namespace ipc
 
-#endif // BITCOIN_IPC_PROCESS_H
+#endif // MATEABLE_IPC_PROCESS_H

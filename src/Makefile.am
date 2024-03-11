@@ -1,4 +1,4 @@
-# Copyright (c) 2013-2016 The Bitcoin Core developers
+# Copyright (c) 2013-2016 The Mateable Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -24,49 +24,49 @@ noinst_PROGRAMS =
 TESTS =
 BENCHMARKS =
 
-BITCOIN_INCLUDES=-I$(builddir) -I$(srcdir)/$(MINISKETCH_INCLUDE_DIR_INT) -I$(srcdir)/secp256k1/include -I$(srcdir)/$(UNIVALUE_INCLUDE_DIR_INT) $(LEVELDB_CPPFLAGS)
+MATEABLE_INCLUDES=-I$(builddir) -I$(srcdir)/$(MINISKETCH_INCLUDE_DIR_INT) -I$(srcdir)/secp256k1/include -I$(srcdir)/$(UNIVALUE_INCLUDE_DIR_INT) $(LEVELDB_CPPFLAGS)
 
-LIBBITCOIN_NODE=libmateable_node.a
-LIBBITCOIN_COMMON=libmateable_common.a
-LIBBITCOIN_CONSENSUS=libmateable_consensus.a
-LIBBITCOIN_CLI=libmateable_cli.a
-LIBBITCOIN_UTIL=libmateable_util.a
-LIBBITCOIN_CRYPTO_BASE=crypto/libmateable_crypto_base.la
-LIBBITCOINQT=qt/libmateableqt.a
+LIBMATEABLE_NODE=libbitcoin_node.a
+LIBMATEABLE_COMMON=libbitcoin_common.a
+LIBMATEABLE_CONSENSUS=libbitcoin_consensus.a
+LIBMATEABLE_CLI=libbitcoin_cli.a
+LIBMATEABLE_UTIL=libbitcoin_util.a
+LIBMATEABLE_CRYPTO_BASE=crypto/libbitcoin_crypto_base.la
+LIBMATEABLEQT=qt/libbitcoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBBITCOIN_ZMQ=libmateable_zmq.a
+LIBMATEABLE_ZMQ=libbitcoin_zmq.a
 endif
-if BUILD_BITCOIN_LIBS
-LIBBITCOINCONSENSUS=libbitcoinconsensus.la
+if BUILD_MATEABLE_LIBS
+LIBMATEABLECONSENSUS=libbitcoinconsensus.la
 endif
-if BUILD_BITCOIN_KERNEL_LIB
-LIBBITCOINKERNEL=libbitcoinkernel.la
+if BUILD_MATEABLE_KERNEL_LIB
+LIBMATEABLEKERNEL=libbitcoinkernel.la
 endif
 if ENABLE_WALLET
-LIBBITCOIN_WALLET=libmateable_wallet.a
-LIBBITCOIN_WALLET_TOOL=libmateable_wallet_tool.a
+LIBMATEABLE_WALLET=libbitcoin_wallet.a
+LIBMATEABLE_WALLET_TOOL=libbitcoin_wallet_tool.a
 endif
 
-LIBBITCOIN_CRYPTO = $(LIBBITCOIN_CRYPTO_BASE)
+LIBMATEABLE_CRYPTO = $(LIBMATEABLE_CRYPTO_BASE)
 if ENABLE_SSE41
-LIBBITCOIN_CRYPTO_SSE41 = crypto/libmateable_crypto_sse41.la
-LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_SSE41)
+LIBMATEABLE_CRYPTO_SSE41 = crypto/libbitcoin_crypto_sse41.la
+LIBMATEABLE_CRYPTO += $(LIBMATEABLE_CRYPTO_SSE41)
 endif
 if ENABLE_AVX2
-LIBBITCOIN_CRYPTO_AVX2 = crypto/libmateable_crypto_avx2.la
-LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_AVX2)
+LIBMATEABLE_CRYPTO_AVX2 = crypto/libbitcoin_crypto_avx2.la
+LIBMATEABLE_CRYPTO += $(LIBMATEABLE_CRYPTO_AVX2)
 endif
 if ENABLE_X86_SHANI
-LIBBITCOIN_CRYPTO_X86_SHANI = crypto/libmateable_crypto_x86_shani.la
-LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_X86_SHANI)
+LIBMATEABLE_CRYPTO_X86_SHANI = crypto/libbitcoin_crypto_x86_shani.la
+LIBMATEABLE_CRYPTO += $(LIBMATEABLE_CRYPTO_X86_SHANI)
 endif
 if ENABLE_ARM_SHANI
-LIBBITCOIN_CRYPTO_ARM_SHANI = crypto/libmateable_crypto_arm_shani.la
-LIBBITCOIN_CRYPTO += $(LIBBITCOIN_CRYPTO_ARM_SHANI)
+LIBMATEABLE_CRYPTO_ARM_SHANI = crypto/libbitcoin_crypto_arm_shani.la
+LIBMATEABLE_CRYPTO += $(LIBMATEABLE_CRYPTO_ARM_SHANI)
 endif
-noinst_LTLIBRARIES += $(LIBBITCOIN_CRYPTO)
+noinst_LTLIBRARIES += $(LIBMATEABLE_CRYPTO)
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*.h) $(wildcard secp256k1/src/*.c) $(wildcard secp256k1/include/*)
 	$(AM_V_at)$(MAKE) $(AM_MAKEFLAGS) -C $(@D) $(@F)
@@ -74,49 +74,49 @@ $(LIBSECP256K1): $(wildcard secp256k1/src/*.h) $(wildcard secp256k1/src/*.c) $(w
 # Make is not made aware of per-object dependencies to avoid limiting building parallelization
 # But to build the less dependent modules first, we manually select their order here:
 EXTRA_LIBRARIES += \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_CONSENSUS) \
-  $(LIBBITCOIN_NODE) \
-  $(LIBBITCOIN_CLI) \
-  $(LIBBITCOIN_IPC) \
-  $(LIBBITCOIN_WALLET) \
-  $(LIBBITCOIN_WALLET_TOOL) \
-  $(LIBBITCOIN_ZMQ)
+  $(LIBMATEABLE_UTIL) \
+  $(LIBMATEABLE_COMMON) \
+  $(LIBMATEABLE_CONSENSUS) \
+  $(LIBMATEABLE_NODE) \
+  $(LIBMATEABLE_CLI) \
+  $(LIBMATEABLE_IPC) \
+  $(LIBMATEABLE_WALLET) \
+  $(LIBMATEABLE_WALLET_TOOL) \
+  $(LIBMATEABLE_ZMQ)
 
-if BUILD_BITCOIND
+if BUILD_MATEABLED
   bin_PROGRAMS += mateabled
 endif
 
-if BUILD_BITCOIN_NODE
+if BUILD_MATEABLE_NODE
   bin_PROGRAMS += mateable-node
 endif
 
-if BUILD_BITCOIN_CLI
+if BUILD_MATEABLE_CLI
   bin_PROGRAMS += mateable-cli
 endif
 
-if BUILD_BITCOIN_TX
+if BUILD_MATEABLE_TX
   bin_PROGRAMS += mateable-tx
 endif
 
 if ENABLE_WALLET
-if BUILD_BITCOIN_WALLET
+if BUILD_MATEABLE_WALLET
   bin_PROGRAMS += mateable-wallet
 endif
 endif
 
-if BUILD_BITCOIN_UTIL
+if BUILD_MATEABLE_UTIL
   bin_PROGRAMS += mateable-util
 endif
 
-if BUILD_BITCOIN_CHAINSTATE
+if BUILD_MATEABLE_CHAINSTATE
   bin_PROGRAMS += mateable-chainstate
 endif
 
 .PHONY: FORCE check-symbols check-security
 # bitcoin core #
-BITCOIN_CORE_H = \
+MATEABLE_CORE_H = \
   addrdb.h \
   addrman.h \
   addrman_impl.h \
@@ -346,16 +346,16 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh "$(abs_top_builddir)/src/obj/build.h" \
 	  "$(abs_top_srcdir)"
-libmateable_util_a-clientversion.$(OBJEXT): obj/build.h
+libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
 
-# server: shared between bitcoind and bitcoin-qt
+# server: shared between mateabled and mateable-qt
 # Contains code accessing mempool and chain state that is meant to be separated
 # from wallet and gui code (see node/README.md). Shared code should go in
-# libmateable_common or libmateable_util libraries, instead.
-libmateable_node_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BOOST_CPPFLAGS) $(MINIUPNPC_CPPFLAGS) $(NATPMP_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libmateable_node_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libmateable_node_a_SOURCES = \
+# libbitcoin_common or libbitcoin_util libraries, instead.
+libbitcoin_node_a_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES) $(BOOST_CPPFLAGS) $(MINIUPNPC_CPPFLAGS) $(NATPMP_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libbitcoin_node_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libbitcoin_node_a_SOURCES = \
   addrdb.cpp \
   addrman.cpp \
   banman.cpp \
@@ -438,20 +438,20 @@ libmateable_node_a_SOURCES = \
   validation.cpp \
   validationinterface.cpp \
   versionbits.cpp \
-  $(BITCOIN_CORE_H)
+  $(MATEABLE_CORE_H)
 
 if ENABLE_WALLET
-libmateable_node_a_SOURCES += wallet/init.cpp
-libmateable_node_a_CPPFLAGS += $(BDB_CPPFLAGS)
+libbitcoin_node_a_SOURCES += wallet/init.cpp
+libbitcoin_node_a_CPPFLAGS += $(BDB_CPPFLAGS)
 endif
 if !ENABLE_WALLET
-libmateable_node_a_SOURCES += dummywallet.cpp
+libbitcoin_node_a_SOURCES += dummywallet.cpp
 endif
 
 if ENABLE_ZMQ
-libmateable_zmq_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libmateable_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libmateable_zmq_a_SOURCES = \
+libbitcoin_zmq_a_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES) $(ZMQ_CFLAGS)
+libbitcoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libbitcoin_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp \
@@ -460,11 +460,11 @@ libmateable_zmq_a_SOURCES = \
 endif
 
 
-# wallet: shared between bitcoind and bitcoin-qt, but only linked
+# wallet: shared between mateabled and mateable-qt, but only linked
 # when wallet enabled
-libmateable_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BOOST_CPPFLAGS) $(BDB_CPPFLAGS) $(SQLITE_CFLAGS)
-libmateable_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libmateable_wallet_a_SOURCES = \
+libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES) $(BOOST_CPPFLAGS) $(BDB_CPPFLAGS) $(SQLITE_CFLAGS)
+libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libbitcoin_wallet_a_SOURCES = \
   wallet/coincontrol.cpp \
   wallet/context.cpp \
   wallet/crypter.cpp \
@@ -494,33 +494,33 @@ libmateable_wallet_a_SOURCES = \
   pos/minter.cpp \
   wallet/walletutil.cpp \
   wallet/coinselection.cpp \
-  $(BITCOIN_CORE_H)
+  $(MATEABLE_CORE_H)
 
 if USE_SQLITE
-libmateable_wallet_a_SOURCES += wallet/sqlite.cpp
+libbitcoin_wallet_a_SOURCES += wallet/sqlite.cpp
 endif
 if USE_BDB
-libmateable_wallet_a_SOURCES += wallet/bdb.cpp wallet/salvage.cpp
+libbitcoin_wallet_a_SOURCES += wallet/bdb.cpp wallet/salvage.cpp
 endif
 
-libmateable_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BOOST_CPPFLAGS)
-libmateable_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libmateable_wallet_tool_a_SOURCES = \
+libbitcoin_wallet_tool_a_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES) $(BOOST_CPPFLAGS)
+libbitcoin_wallet_tool_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libbitcoin_wallet_tool_a_SOURCES = \
   wallet/wallettool.cpp \
-  $(BITCOIN_CORE_H)
+  $(MATEABLE_CORE_H)
 
 # crypto primitives library
-crypto_libmateable_crypto_base_la_CPPFLAGS = $(AM_CPPFLAGS) $(SSL_CFLAGS)
+crypto_libbitcoin_crypto_base_la_CPPFLAGS = $(AM_CPPFLAGS) $(SSL_CFLAGS)
 
 # Specify -static in both CXXFLAGS and LDFLAGS so libtool will only build a
 # static version of this library. We don't need a dynamic version, and a dynamic
 # version can't be used on windows anyway because the library doesn't currently
 # export DLL symbols.
-crypto_libmateable_crypto_base_la_CFLAGS = $(AM_CFLAGS) $(PIE_FLAGS) -static
-crypto_libmateable_crypto_base_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
-crypto_libmateable_crypto_base_la_LDFLAGS = $(AM_LDFLAGS) -static
+crypto_libbitcoin_crypto_base_la_CFLAGS = $(AM_CFLAGS) $(PIE_FLAGS) -static
+crypto_libbitcoin_crypto_base_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
+crypto_libbitcoin_crypto_base_la_LDFLAGS = $(AM_LDFLAGS) -static
 
-crypto_libmateable_crypto_base_la_SOURCES = \
+crypto_libbitcoin_crypto_base_la_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/chacha_poly_aead.h \
@@ -590,49 +590,49 @@ crypto_libmateable_crypto_base_la_SOURCES = \
   crypto/balloon/balloon.cpp
 
 if USE_ASM
-crypto_libmateable_crypto_base_la_SOURCES += crypto/sha256_sse4.cpp
+crypto_libbitcoin_crypto_base_la_SOURCES += crypto/sha256_sse4.cpp
 endif
 
-# See explanation for -static in crypto_libmateable_crypto_base_la's LDFLAGS and
+# See explanation for -static in crypto_libbitcoin_crypto_base_la's LDFLAGS and
 # CXXFLAGS above
-crypto_libmateable_crypto_sse41_la_LDFLAGS = $(AM_LDFLAGS) -static
-crypto_libmateable_crypto_sse41_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
-crypto_libmateable_crypto_sse41_la_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libmateable_crypto_sse41_la_CXXFLAGS += $(SSE41_CXXFLAGS)
-crypto_libmateable_crypto_sse41_la_CPPFLAGS += -DENABLE_SSE41
-crypto_libmateable_crypto_sse41_la_SOURCES = crypto/sha256_sse41.cpp
+crypto_libbitcoin_crypto_sse41_la_LDFLAGS = $(AM_LDFLAGS) -static
+crypto_libbitcoin_crypto_sse41_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
+crypto_libbitcoin_crypto_sse41_la_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libbitcoin_crypto_sse41_la_CXXFLAGS += $(SSE41_CXXFLAGS)
+crypto_libbitcoin_crypto_sse41_la_CPPFLAGS += -DENABLE_SSE41
+crypto_libbitcoin_crypto_sse41_la_SOURCES = crypto/sha256_sse41.cpp
 
-# See explanation for -static in crypto_libmateable_crypto_base_la's LDFLAGS and
+# See explanation for -static in crypto_libbitcoin_crypto_base_la's LDFLAGS and
 # CXXFLAGS above
-crypto_libmateable_crypto_avx2_la_LDFLAGS = $(AM_LDFLAGS) -static
-crypto_libmateable_crypto_avx2_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
-crypto_libmateable_crypto_avx2_la_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libmateable_crypto_avx2_la_CXXFLAGS += $(AVX2_CXXFLAGS)
-crypto_libmateable_crypto_avx2_la_CPPFLAGS += -DENABLE_AVX2
-crypto_libmateable_crypto_avx2_la_SOURCES = crypto/sha256_avx2.cpp
+crypto_libbitcoin_crypto_avx2_la_LDFLAGS = $(AM_LDFLAGS) -static
+crypto_libbitcoin_crypto_avx2_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
+crypto_libbitcoin_crypto_avx2_la_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libbitcoin_crypto_avx2_la_CXXFLAGS += $(AVX2_CXXFLAGS)
+crypto_libbitcoin_crypto_avx2_la_CPPFLAGS += -DENABLE_AVX2
+crypto_libbitcoin_crypto_avx2_la_SOURCES = crypto/sha256_avx2.cpp
 
-# See explanation for -static in crypto_libmateable_crypto_base_la's LDFLAGS and
+# See explanation for -static in crypto_libbitcoin_crypto_base_la's LDFLAGS and
 # CXXFLAGS above
-crypto_libmateable_crypto_x86_shani_la_LDFLAGS = $(AM_LDFLAGS) -static
-crypto_libmateable_crypto_x86_shani_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
-crypto_libmateable_crypto_x86_shani_la_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libmateable_crypto_x86_shani_la_CXXFLAGS += $(X86_SHANI_CXXFLAGS)
-crypto_libmateable_crypto_x86_shani_la_CPPFLAGS += -DENABLE_X86_SHANI
-crypto_libmateable_crypto_x86_shani_la_SOURCES = crypto/sha256_x86_shani.cpp
+crypto_libbitcoin_crypto_x86_shani_la_LDFLAGS = $(AM_LDFLAGS) -static
+crypto_libbitcoin_crypto_x86_shani_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
+crypto_libbitcoin_crypto_x86_shani_la_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libbitcoin_crypto_x86_shani_la_CXXFLAGS += $(X86_SHANI_CXXFLAGS)
+crypto_libbitcoin_crypto_x86_shani_la_CPPFLAGS += -DENABLE_X86_SHANI
+crypto_libbitcoin_crypto_x86_shani_la_SOURCES = crypto/sha256_x86_shani.cpp
 
-# See explanation for -static in crypto_libmateable_crypto_base_la's LDFLAGS and
+# See explanation for -static in crypto_libbitcoin_crypto_base_la's LDFLAGS and
 # CXXFLAGS above
-crypto_libmateable_crypto_arm_shani_la_LDFLAGS = $(AM_LDFLAGS) -static
-crypto_libmateable_crypto_arm_shani_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
-crypto_libmateable_crypto_arm_shani_la_CPPFLAGS = $(AM_CPPFLAGS)
-crypto_libmateable_crypto_arm_shani_la_CXXFLAGS += $(ARM_SHANI_CXXFLAGS)
-crypto_libmateable_crypto_arm_shani_la_CPPFLAGS += -DENABLE_ARM_SHANI
-crypto_libmateable_crypto_arm_shani_la_SOURCES = crypto/sha256_arm_shani.cpp
+crypto_libbitcoin_crypto_arm_shani_la_LDFLAGS = $(AM_LDFLAGS) -static
+crypto_libbitcoin_crypto_arm_shani_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) -static
+crypto_libbitcoin_crypto_arm_shani_la_CPPFLAGS = $(AM_CPPFLAGS)
+crypto_libbitcoin_crypto_arm_shani_la_CXXFLAGS += $(ARM_SHANI_CXXFLAGS)
+crypto_libbitcoin_crypto_arm_shani_la_CPPFLAGS += -DENABLE_ARM_SHANI
+crypto_libbitcoin_crypto_arm_shani_la_SOURCES = crypto/sha256_arm_shani.cpp
 
 # consensus: shared between all executables that validate any consensus rules.
-libmateable_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libmateable_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libmateable_consensus_a_SOURCES = \
+libbitcoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES)
+libbitcoin_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libbitcoin_consensus_a_SOURCES = \
   arith_uint256.cpp \
   arith_uint256.h \
   consensus/amount.h \
@@ -668,10 +668,10 @@ libmateable_consensus_a_SOURCES = \
   util/strencodings.h \
   version.h
 
-# common: shared between bitcoind, and bitcoin-qt and non-server tools
-libmateable_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libmateable_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libmateable_common_a_SOURCES = \
+# common: shared between mateabled, and mateable-qt and non-server tools
+libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES)
+libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libbitcoin_common_a_SOURCES = \
   base58.cpp \
   bech32.cpp \
   chainparams.cpp \
@@ -705,12 +705,12 @@ libmateable_common_a_SOURCES = \
   script/signingprovider.cpp \
   script/standard.cpp \
   warnings.cpp \
-  $(BITCOIN_CORE_H)
+  $(MATEABLE_CORE_H)
 
 # util: shared between all executables.
-libmateable_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BOOST_CPPFLAGS)
-libmateable_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libmateable_util_a_SOURCES = \
+libbitcoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES) $(BOOST_CPPFLAGS)
+libbitcoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libbitcoin_util_a_SOURCES = \
   support/lockedpool.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -750,162 +750,162 @@ libmateable_util_a_SOURCES = \
   util/syscall_sandbox.cpp \
   util/time.cpp \
   util/tokenpipe.cpp \
-  $(BITCOIN_CORE_H)
+  $(MATEABLE_CORE_H)
 
 if USE_LIBEVENT
-libmateable_util_a_SOURCES += util/url.cpp
+libbitcoin_util_a_SOURCES += util/url.cpp
 endif
 
-# cli: shared between bitcoin-cli and bitcoin-qt
-libmateable_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libmateable_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libmateable_cli_a_SOURCES = \
+# cli: shared between mateable-cli and mateable-qt
+libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES)
+libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libbitcoin_cli_a_SOURCES = \
   compat/stdin.h \
   compat/stdin.cpp \
   rpc/client.cpp \
-  $(BITCOIN_CORE_H)
+  $(MATEABLE_CORE_H)
 
-nodist_libmateable_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# bitcoind & bitcoin-node binaries #
-mateable_daemon_sources = bitcoind.cpp
-mateable_bin_cppflags = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-mateable_bin_cxxflags = $(AM_CXXFLAGS) $(PIE_FLAGS)
-mateable_bin_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# mateabled & mateable-node binaries #
+bitcoin_daemon_sources = mateabled.cpp
+bitcoin_bin_cppflags = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES)
+bitcoin_bin_cxxflags = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bitcoin_bin_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-mateable_daemon_sources += bitcoind-res.rc
+bitcoin_daemon_sources += mateabled-res.rc
 endif
 
-mateable_bin_ldadd = \
-  $(LIBBITCOIN_WALLET) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
+bitcoin_bin_ldadd = \
+  $(LIBMATEABLE_WALLET) \
+  $(LIBMATEABLE_COMMON) \
+  $(LIBMATEABLE_UTIL) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_ZMQ) \
-  $(LIBBITCOIN_CONSENSUS) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBMATEABLE_ZMQ) \
+  $(LIBMATEABLE_CONSENSUS) \
+  $(LIBMATEABLE_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-mateable_bin_ldadd += $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(SQLITE_LIBS)
+bitcoin_bin_ldadd += $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(SQLITE_LIBS)
 
-mateabled_SOURCES = $(mateable_daemon_sources) init/bitcoind.cpp
-mateabled_CPPFLAGS = $(mateable_bin_cppflags)
-mateabled_CXXFLAGS = $(mateable_bin_cxxflags)
-mateabled_LDFLAGS = $(mateable_bin_ldflags)
-mateabled_LDADD = $(LIBBITCOIN_NODE) $(mateable_bin_ldadd)
+mateabled_SOURCES = $(bitcoin_daemon_sources) init/mateabled.cpp
+mateabled_CPPFLAGS = $(bitcoin_bin_cppflags)
+mateabled_CXXFLAGS = $(bitcoin_bin_cxxflags)
+mateabled_LDFLAGS = $(bitcoin_bin_ldflags)
+mateabled_LDADD = $(LIBMATEABLE_NODE) $(bitcoin_bin_ldadd)
 
-mateable_node_SOURCES = $(mateable_daemon_sources) init/bitcoin-node.cpp
-mateable_node_CPPFLAGS = $(mateable_bin_cppflags)
-mateable_node_CXXFLAGS = $(mateable_bin_cxxflags)
-mateable_node_LDFLAGS = $(mateable_bin_ldflags)
-mateable_node_LDADD = $(LIBBITCOIN_NODE) $(mateable_bin_ldadd) $(LIBBITCOIN_IPC) $(LIBMULTIPROCESS_LIBS)
+bitcoin_node_SOURCES = $(bitcoin_daemon_sources) init/mateable-node.cpp
+bitcoin_node_CPPFLAGS = $(bitcoin_bin_cppflags)
+bitcoin_node_CXXFLAGS = $(bitcoin_bin_cxxflags)
+bitcoin_node_LDFLAGS = $(bitcoin_bin_ldflags)
+bitcoin_node_LDADD = $(LIBMATEABLE_NODE) $(bitcoin_bin_ldadd) $(LIBMATEABLE_IPC) $(LIBMULTIPROCESS_LIBS)
 
-# bitcoin-cli binary #
-mateable_cli_SOURCES = bitcoin-cli.cpp
-mateable_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-mateable_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-mateable_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# mateable-cli binary #
+bitcoin_cli_SOURCES = mateable-cli.cpp
+bitcoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES) $(EVENT_CFLAGS)
+bitcoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bitcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-mateable_cli_SOURCES += bitcoin-cli-res.rc
+bitcoin_cli_SOURCES += mateable-cli-res.rc
 endif
 
-mateable_cli_LDADD = \
-  $(LIBBITCOIN_CLI) \
+bitcoin_cli_LDADD = \
+  $(LIBMATEABLE_CLI) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_CRYPTO)
+  $(LIBMATEABLE_UTIL) \
+  $(LIBMATEABLE_CRYPTO)
 
-mateable_cli_LDADD += $(CRYPTO_LIBS) $(EVENT_LIBS)
+bitcoin_cli_LDADD += $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# bitcoin-tx binary #
-mateable_tx_SOURCES = bitcoin-tx.cpp
-mateable_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-mateable_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-mateable_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# mateable-tx binary #
+bitcoin_tx_SOURCES = mateable-tx.cpp
+bitcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES)
+bitcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bitcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-mateable_tx_SOURCES += bitcoin-tx-res.rc
+bitcoin_tx_SOURCES += mateable-tx-res.rc
 endif
 
-mateable_tx_LDADD = \
+bitcoin_tx_LDADD = \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
-  $(LIBBITCOIN_CONSENSUS) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBMATEABLE_COMMON) \
+  $(LIBMATEABLE_UTIL) \
+  $(LIBMATEABLE_CONSENSUS) \
+  $(LIBMATEABLE_CRYPTO) \
   $(CRYPTO_LIBS) \
   $(LIBSECP256K1)
 #
 
-# bitcoin-wallet binary #
-mateable_wallet_SOURCES = bitcoin-wallet.cpp
-mateable_wallet_SOURCES += init/bitcoin-wallet.cpp
-mateable_wallet_CPPFLAGS = $(mateable_bin_cppflags)
-mateable_wallet_CXXFLAGS = $(mateable_bin_cxxflags)
-mateable_wallet_LDFLAGS = $(mateable_bin_ldflags)
-mateable_wallet_LDADD = \
-  $(LIBBITCOIN_WALLET_TOOL) \
-  $(LIBBITCOIN_WALLET) \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
+# mateable-wallet binary #
+bitcoin_wallet_SOURCES = mateable-wallet.cpp
+bitcoin_wallet_SOURCES += init/mateable-wallet.cpp
+bitcoin_wallet_CPPFLAGS = $(bitcoin_bin_cppflags)
+bitcoin_wallet_CXXFLAGS = $(bitcoin_bin_cxxflags)
+bitcoin_wallet_LDFLAGS = $(bitcoin_bin_ldflags)
+bitcoin_wallet_LDADD = \
+  $(LIBMATEABLE_WALLET_TOOL) \
+  $(LIBMATEABLE_WALLET) \
+  $(LIBMATEABLE_COMMON) \
+  $(LIBMATEABLE_UTIL) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_CONSENSUS) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBMATEABLE_CONSENSUS) \
+  $(LIBMATEABLE_CRYPTO) \
   $(LIBSECP256K1) \
   $(BDB_LIBS) \
   $(CRYPTO_LIBS) \
   $(SQLITE_LIBS)
 
 if TARGET_WINDOWS
-mateable_wallet_SOURCES += bitcoin-wallet-res.rc
+bitcoin_wallet_SOURCES += mateable-wallet-res.rc
 endif
 #
 
-# bitcoin-util binary #
-mateable_util_SOURCES = bitcoin-util.cpp
-mateable_util_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-mateable_util_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-mateable_util_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+# mateable-util binary #
+bitcoin_util_SOURCES = mateable-util.cpp
+bitcoin_util_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES)
+bitcoin_util_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bitcoin_util_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-mateable_util_SOURCES += bitcoin-util-res.rc
+bitcoin_util_SOURCES += mateable-util-res.rc
 endif
 
-mateable_util_LDADD = \
-  $(LIBBITCOIN_COMMON) \
-  $(LIBBITCOIN_UTIL) \
+bitcoin_util_LDADD = \
+  $(LIBMATEABLE_COMMON) \
+  $(LIBMATEABLE_UTIL) \
   $(LIBUNIVALUE) \
-  $(LIBBITCOIN_CONSENSUS) \
-  $(LIBBITCOIN_CRYPTO) \
+  $(LIBMATEABLE_CONSENSUS) \
+  $(LIBMATEABLE_CRYPTO) \
   $(CRYPTO_LIBS) \
   $(LIBSECP256K1)
 #
 
-# bitcoin-chainstate binary #
-mateable_chainstate_SOURCES = bitcoin-chainstate.cpp
-mateable_chainstate_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BOOST_CPPFLAGS)
-mateable_chainstate_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+# mateable-chainstate binary #
+bitcoin_chainstate_SOURCES = mateable-chainstate.cpp
+bitcoin_chainstate_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES) $(BOOST_CPPFLAGS)
+bitcoin_chainstate_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 # $(LIBTOOL_APP_LDFLAGS) deliberately omitted here so that we can test linking
-# bitcoin-chainstate against libbitcoinkernel as a shared or static library by
+# mateable-chainstate against libbitcoinkernel as a shared or static library by
 # setting --{en,dis}able-shared.
-mateable_chainstate_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(PTHREAD_FLAGS)
-mateable_chainstate_LDADD = $(LIBBITCOINKERNEL)
+bitcoin_chainstate_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(PTHREAD_FLAGS)
+bitcoin_chainstate_LDADD = $(LIBMATEABLEKERNEL)
 #
 
 # bitcoinkernel library #
-if BUILD_BITCOIN_KERNEL_LIB
-lib_LTLIBRARIES += $(LIBBITCOINKERNEL)
+if BUILD_MATEABLE_KERNEL_LIB
+lib_LTLIBRARIES += $(LIBMATEABLEKERNEL)
 
 libbitcoinkernel_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS) $(PTHREAD_FLAGS)
-libbitcoinkernel_la_LIBADD = $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1)
-libbitcoinkernel_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) -I$(srcdir)/$(UNIVALUE_INCLUDE_DIR_INT)
+libbitcoinkernel_la_LIBADD = $(LIBMATEABLE_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBMEMENV) $(LIBSECP256K1)
+libbitcoinkernel_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_MATEABLE_INTERNAL $(BOOST_CPPFLAGS) $(LEVELDB_CPPFLAGS) -I$(srcdir)/$(UNIVALUE_INCLUDE_DIR_INT)
 
 # libbitcoinkernel requires default symbol visibility, explicitly specify that
 # here so that things still work even when user configures with
@@ -1010,19 +1010,19 @@ libbitcoinkernel_la_SOURCES = \
 # Required for obj/build.h to be generated first.
 # More details: https://www.gnu.org/software/automake/manual/html_node/Built-Sources-Example.html
 libbitcoinkernel_la-clientversion.l$(OBJEXT): obj/build.h
-endif # BUILD_BITCOIN_KERNEL_LIB
+endif # BUILD_MATEABLE_KERNEL_LIB
 #
 
 # bitcoinconsensus library #
-if BUILD_BITCOIN_LIBS
-lib_LTLIBRARIES += $(LIBBITCOINCONSENSUS)
+if BUILD_MATEABLE_LIBS
+lib_LTLIBRARIES += $(LIBMATEABLECONSENSUS)
 
 include_HEADERS = script/bitcoinconsensus.h
-libbitcoinconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libmateable_crypto_base_la_SOURCES) $(libmateable_consensus_a_SOURCES)
+libbitcoinconsensus_la_SOURCES = support/cleanse.cpp $(crypto_libbitcoin_crypto_base_la_SOURCES) $(libbitcoin_consensus_a_SOURCES)
 
 libbitcoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
 libbitcoinconsensus_la_LIBADD = $(LIBSECP256K1) $(CRYPTO_LIBS)
-libbitcoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL $(SSL_CFLAGS)
+libbitcoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_MATEABLE_INTERNAL $(SSL_CFLAGS)
 libbitcoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
@@ -1087,19 +1087,19 @@ if HARDEN
 	$(AM_V_at) $(PYTHON) $(top_srcdir)/contrib/devtools/security-check.py $(bin_PROGRAMS)
 endif
 
-libmateable_ipc_mpgen_input = \
+libbitcoin_ipc_mpgen_input = \
   ipc/capnp/echo.capnp \
   ipc/capnp/init.capnp
-EXTRA_DIST += $(libmateable_ipc_mpgen_input)
+EXTRA_DIST += $(libbitcoin_ipc_mpgen_input)
 %.capnp:
 
 # Explicitly list dependencies on generated headers as described in
 # https://www.gnu.org/software/automake/manual/html_node/Built-Sources-Example.html#Recording-Dependencies-manually
-ipc/capnp/libmateable_ipc_a-protocol.$(OBJEXT): $(libmateable_ipc_mpgen_input:=.h)
+ipc/capnp/libbitcoin_ipc_a-protocol.$(OBJEXT): $(libbitcoin_ipc_mpgen_input:=.h)
 
 if BUILD_MULTIPROCESS
-LIBBITCOIN_IPC=libmateable_ipc.a
-libmateable_ipc_a_SOURCES = \
+LIBMATEABLE_IPC=libbitcoin_ipc.a
+libbitcoin_ipc_a_SOURCES = \
   ipc/capnp/context.h \
   ipc/capnp/init-types.h \
   ipc/capnp/protocol.cpp \
@@ -1110,20 +1110,20 @@ libmateable_ipc_a_SOURCES = \
   ipc/process.cpp \
   ipc/process.h \
   ipc/protocol.h
-libmateable_ipc_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libmateable_ipc_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) $(LIBMULTIPROCESS_CFLAGS)
+libbitcoin_ipc_a_CPPFLAGS = $(AM_CPPFLAGS) $(MATEABLE_INCLUDES)
+libbitcoin_ipc_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS) $(LIBMULTIPROCESS_CFLAGS)
 
 include $(MPGEN_PREFIX)/include/mpgen.mk
-libmateable_ipc_mpgen_output = \
-  $(libmateable_ipc_mpgen_input:=.c++) \
-  $(libmateable_ipc_mpgen_input:=.h) \
-  $(libmateable_ipc_mpgen_input:=.proxy-client.c++) \
-  $(libmateable_ipc_mpgen_input:=.proxy-server.c++) \
-  $(libmateable_ipc_mpgen_input:=.proxy-types.c++) \
-  $(libmateable_ipc_mpgen_input:=.proxy-types.h) \
-  $(libmateable_ipc_mpgen_input:=.proxy.h)
-nodist_libmateable_ipc_a_SOURCES = $(libmateable_ipc_mpgen_output)
-CLEANFILES += $(libmateable_ipc_mpgen_output)
+libbitcoin_ipc_mpgen_output = \
+  $(libbitcoin_ipc_mpgen_input:=.c++) \
+  $(libbitcoin_ipc_mpgen_input:=.h) \
+  $(libbitcoin_ipc_mpgen_input:=.proxy-client.c++) \
+  $(libbitcoin_ipc_mpgen_input:=.proxy-server.c++) \
+  $(libbitcoin_ipc_mpgen_input:=.proxy-types.c++) \
+  $(libbitcoin_ipc_mpgen_input:=.proxy-types.h) \
+  $(libbitcoin_ipc_mpgen_input:=.proxy.h)
+nodist_libbitcoin_ipc_a_SOURCES = $(libbitcoin_ipc_mpgen_output)
+CLEANFILES += $(libbitcoin_ipc_mpgen_output)
 endif
 
 %.raw.h: %.raw

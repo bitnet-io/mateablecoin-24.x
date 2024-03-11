@@ -1,5 +1,5 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2021 The Bitcoin Core developers
+// Copyright (c) 2009-2021 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -150,9 +150,9 @@ public:
         // This is fine at runtime as we'll fall back to using them as an addrfetch if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("seed1.mateable.com.");
-        vSeeds.emplace_back("seed2.mateable.com.");
-        vSeeds.emplace_back("seed3.mateable.com.");
+        vSeeds.emplace_back("seed1.bitcoin.com.");
+        vSeeds.emplace_back("seed2.bitcoin.com.");
+        vSeeds.emplace_back("seed3.bitcoin.com.");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,51);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,128);

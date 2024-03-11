@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2020 The Bitcoin Core developers
+// Copyright (c) 2011-2020 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_GUICONSTANTS_H
-#define BITCOIN_QT_GUICONSTANTS_H
+#ifndef MATEABLE_QT_GUICONSTANTS_H
+#define MATEABLE_QT_GUICONSTANTS_H
 
 #include <chrono>
 #include <cstdint>
@@ -19,7 +19,7 @@ static constexpr auto SHUTDOWN_POLLING_DELAY{200ms};
 /* AskPassphraseDialog -- Maximum passphrase length */
 static const int MAX_PASSPHRASE_SIZE = 1024;
 
-/* BitcoinGUI -- Size of icons in status bar */
+/* MateableGUI -- Size of icons in status bar */
 static const int STATUSBAR_ICONSIZE = 16;
 
 static const bool DEFAULT_SPLASHSCREEN = true;
@@ -47,7 +47,7 @@ static const int TOOLTIP_WRAP_THRESHOLD = 80;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "Mateable"
-#define QAPP_ORG_DOMAIN "coin.mateable.com"
+#define QAPP_ORG_DOMAIN "coin.bitcoin.com"
 #define QAPP_APP_NAME_DEFAULT "Mateable-Qt"
 #define QAPP_APP_NAME_TESTNET "Mateable-Qt-testnet"
 #define QAPP_APP_NAME_SIGNET "Mateable-Qt-signet"
@@ -59,4 +59,4 @@ static constexpr uint64_t GB_BYTES{1000000000};
 // Default prune target displayed in GUI.
 static constexpr int DEFAULT_PRUNE_TARGET_GB{2};
 
-#endif // BITCOIN_QT_GUICONSTANTS_H
+#endif // MATEABLE_QT_GUICONSTANTS_H

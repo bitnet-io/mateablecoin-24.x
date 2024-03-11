@@ -1,9 +1,9 @@
-// Copyright (c) 2011-2021 The Bitcoin Core developers
+// Copyright (c) 2011-2021 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#include <config/mateable-config.h>
 #endif
 
 #include <qt/optionsmodel.h>
@@ -165,15 +165,15 @@ bool OptionsModel::Init(bilingual_str& error)
     fMinimizeOnClose = settings.value("fMinimizeOnClose").toBool();
 
     // Display
-    if (!settings.contains("DisplayBitcoinUnit")) {
-        settings.setValue("DisplayBitcoinUnit", QVariant::fromValue(BitcoinUnit::BTC));
+    if (!settings.contains("DisplayMateableUnit")) {
+        settings.setValue("DisplayMateableUnit", QVariant::fromValue(MateableUnit::BTC));
     }
-    QVariant unit = settings.value("DisplayBitcoinUnit");
-    if (unit.canConvert<BitcoinUnit>()) {
-        m_display_bitcoin_unit = unit.value<BitcoinUnit>();
+    QVariant unit = settings.value("DisplayMateableUnit");
+    if (unit.canConvert<MateableUnit>()) {
+        m_display_bitcoin_unit = unit.value<MateableUnit>();
     } else {
-        m_display_bitcoin_unit = BitcoinUnit::BTC;
-        settings.setValue("DisplayBitcoinUnit", QVariant::fromValue(m_display_bitcoin_unit));
+        m_display_bitcoin_unit = MateableUnit::BTC;
+        settings.setValue("DisplayMateableUnit", QVariant::fromValue(m_display_bitcoin_unit));
     }
 
     if (!settings.contains("strThirdPartyTxUrls"))
@@ -621,10 +621,10 @@ bool OptionsModel::setOption(OptionID option, const QVariant& value)
 
 void OptionsModel::setDisplayUnit(const QVariant& new_unit)
 {
-    if (new_unit.isNull() || new_unit.value<BitcoinUnit>() == m_display_bitcoin_unit) return;
-    m_display_bitcoin_unit = new_unit.value<BitcoinUnit>();
+    if (new_unit.isNull() || new_unit.value<MateableUnit>() == m_display_bitcoin_unit) return;
+    m_display_bitcoin_unit = new_unit.value<MateableUnit>();
     QSettings settings;
-    settings.setValue("DisplayBitcoinUnit", QVariant::fromValue(m_display_bitcoin_unit));
+    settings.setValue("DisplayMateableUnit", QVariant::fromValue(m_display_bitcoin_unit));
     Q_EMIT displayUnitChanged(m_display_bitcoin_unit);
 }
 
@@ -712,6 +712,6 @@ void OptionsModel::checkAndMigrate()
     // parameter interaction code to update other settings. This is particularly
     // important for the -listen setting, which should cause -listenonion, -upnp,
     // and other settings to default to false if it was set to false.
-    // (https://github.com/bitcoin-core/gui/issues/567).
+    // (https://github.com/mateable-core/gui/issues/567).
     node().initParameterInteraction();
 }

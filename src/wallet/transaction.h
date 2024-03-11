@@ -1,9 +1,9 @@
-// Copyright (c) 2021 The Bitcoin Core developers
+// Copyright (c) 2021 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_TRANSACTION_H
-#define BITCOIN_WALLET_TRANSACTION_H
+#ifndef MATEABLE_WALLET_TRANSACTION_H
+#define MATEABLE_WALLET_TRANSACTION_H
 
 #include <consensus/amount.h>
 #include <primitives/transaction.h>
@@ -315,4 +315,4 @@ struct WalletTxOrderComparator {
 };
 } // namespace wallet
 
-#endif // BITCOIN_WALLET_TRANSACTION_H
+#endif // MATEABLE_WALLET_TRANSACTION_H

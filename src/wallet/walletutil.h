@@ -1,9 +1,9 @@
-// Copyright (c) 2017-2021 The Bitcoin Core developers
+// Copyright (c) 2017-2021 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_WALLETUTIL_H
-#define BITCOIN_WALLET_WALLETUTIL_H
+#ifndef MATEABLE_WALLET_WALLETUTIL_H
+#define MATEABLE_WALLET_WALLETUTIL_H
 
 #include <fs.h>
 #include <script/descriptor.h>
@@ -120,4 +120,4 @@ struct MigrationData
 };
 } // namespace wallet
 
-#endif // BITCOIN_WALLET_WALLETUTIL_H
+#endif // MATEABLE_WALLET_WALLETUTIL_H

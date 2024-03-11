@@ -18,7 +18,7 @@ persistent_worker_template: &PERSISTENT_WORKER_TEMPLATE
 
 # https://cirrus-ci.org/guide/tips-and-tricks/#sharing-configuration-between-tasks
 filter_template: &FILTER_TEMPLATE
-  skip: $CIRRUS_REPO_FULL_NAME == "bitcoin-core/gui" && $CIRRUS_PR == ""  # No need to run on the read-only mirror, unless it is a PR. https://cirrus-ci.org/guide/writing-tasks/#conditional-task-execution
+  skip: $CIRRUS_REPO_FULL_NAME == "mateable-core/gui" && $CIRRUS_PR == ""  # No need to run on the read-only mirror, unless it is a PR. https://cirrus-ci.org/guide/writing-tasks/#conditional-task-execution
   stateful: false  # https://cirrus-ci.org/guide/writing-tasks/#stateful-tasks
 
 base_template: &BASE_TEMPLATE
@@ -252,7 +252,7 @@ task:
   name: '[ASan + LSan + UBSan + integer, no depends, USDT] [jammy]'
   << : *GLOBAL_TASK_TEMPLATE
   # We can't use a 'container' for the USDT interface tests as the CirrusCI
-  # containers don't have privileges to hook into bitcoind. CirrusCI uses
+  # containers don't have privileges to hook into mateabled. CirrusCI uses
   # Google Compute Engine instances: https://cirrus-ci.org/guide/custom-vms/
   # Images can be found here: https://cloud.google.com/compute/docs/images/os-details
   compute_engine_instance:

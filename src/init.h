@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2021 The Bitcoin Core developers
+// Copyright (c) 2009-2021 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_INIT_H
-#define BITCOIN_INIT_H
+#ifndef MATEABLE_INIT_H
+#define MATEABLE_INIT_H
 
 #include <any>
 #include <memory>
@@ -62,7 +62,7 @@ bool AppInitLockDataDirectory();
  */
 bool AppInitInterfaces(node::NodeContext& node);
 /**
- * Bitcoin core main initialization.
+ * Mateable core main initialization.
  * @note This should only be done after daemonization. Call Shutdown() if this function fails.
  * @pre Parameters should be parsed and config file should be read, AppInitLockDataDirectory should have been called.
  */
@@ -73,4 +73,4 @@ bool AppInitMain(node::NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip
  */
 void SetupServerArgs(ArgsManager& argsman);
 
-#endif // BITCOIN_INIT_H
+#endif // MATEABLE_INIT_H

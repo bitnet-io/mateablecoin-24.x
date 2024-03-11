@@ -8,7 +8,7 @@ Release Process
 * Update translations see [translation_process.md](https://github.com/bitcoin/bitcoin/blob/master/doc/translation_process.md#synchronising-translations).
 * Update release candidate version in `configure.ac` (`CLIENT_VERSION_RC`).
 * Update manpages (after rebuilding the binaries), see [gen-manpages.py](https://github.com/bitcoin/bitcoin/blob/master/contrib/devtools/README.md#gen-manpagespy).
-* Update bitcoin.conf and commit, see [gen-bitcoin-conf.sh](https://github.com/bitcoin/bitcoin/blob/master/contrib/devtools/README.md#gen-bitcoin-confsh).
+* Update bitcoin.conf and commit, see [gen-mateable-conf.sh](https://github.com/bitcoin/bitcoin/blob/master/contrib/devtools/README.md#gen-mateable-confsh).
 
 ### Before every major and minor release
 
@@ -55,7 +55,7 @@ Release Process
 #### After branch-off (on the major release branch)
 
 - Update the versions.
-- Create the draft, named "*version* Release Notes Draft", as a [collaborative wiki](https://github.com/bitcoin-core/bitcoin-devwiki/wiki/_new).
+- Create the draft, named "*version* Release Notes Draft", as a [collaborative wiki](https://github.com/mateable-core/mateable-devwiki/wiki/_new).
 - Clear the release notes: `cp doc/release-notes-empty-template.md doc/release-notes.md`
 - Create a pinned meta-issue for testing the release candidate (see [this issue](https://github.com/bitcoin/bitcoin/issues/17079) for an example) and provide a link to it in the release announcements where useful.
 - Translations on Transifex
@@ -63,14 +63,14 @@ Release Process
 
 #### Before final release
 
-- Merge the release notes from [the wiki](https://github.com/bitcoin-core/bitcoin-devwiki/wiki/) into the branch.
+- Merge the release notes from [the wiki](https://github.com/mateable-core/mateable-devwiki/wiki/) into the branch.
 - Ensure the "Needs release note" label is removed from all relevant pull requests and issues.
 
 #### Tagging a release (candidate)
 
-To tag the version (or release candidate) in git, use the `make-tag.py` script from [bitcoin-maintainer-tools](https://github.com/bitcoin-core/bitcoin-maintainer-tools). From the root of the repository run:
+To tag the version (or release candidate) in git, use the `make-tag.py` script from [mateable-maintainer-tools](https://github.com/mateable-core/mateable-maintainer-tools). From the root of the repository run:
 
-    ../bitcoin-maintainer-tools/make-tag.py v(new version, e.g. 23.0)
+    ../mateable-maintainer-tools/make-tag.py v(new version, e.g. 23.0)
 
 This will perform a few last-minute consistency checks in the build system files, and if they pass, create a signed tag.
 
@@ -84,17 +84,17 @@ Install Guix using one of the installation methods detailed in
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/bitcoin-core/guix.sigs.git
-    git clone https://github.com/bitcoin-core/bitcoin-detached-sigs.git
+    git clone https://github.com/mateable-core/guix.sigs.git
+    git clone https://github.com/mateable-core/mateable-detached-sigs.git
     git clone https://github.com/bitcoin/bitcoin.git
 
 ### Write the release notes
 
-Open a draft of the release notes for collaborative editing at https://github.com/bitcoin-core/bitcoin-devwiki/wiki.
+Open a draft of the release notes for collaborative editing at https://github.com/mateable-core/mateable-devwiki/wiki.
 
 For the period during which the notes are being edited on the wiki, the version on the branch should be wiped and replaced with a link to the wiki which should be used for all announcements until `-final`.
 
-Generate the change log. As this is a huge amount of work to do manually, there is the `list-pulls` script to do a pre-sorting step based on github PR metadata. See the [documentation in the README.md](https://github.com/bitcoin-core/bitcoin-maintainer-tools/blob/master/README.md#list-pulls).
+Generate the change log. As this is a huge amount of work to do manually, there is the `list-pulls` script to do a pre-sorting step based on github PR metadata. See the [documentation in the README.md](https://github.com/mateable-core/mateable-maintainer-tools/blob/master/README.md#list-pulls).
 
 Generate list of authors:
 
@@ -102,7 +102,7 @@ Generate list of authors:
 
 ### Setup and perform Guix builds
 
-Checkout the Bitcoin Core version you'd like to build:
+Checkout the Mateable Core version you'd like to build:
 
 ```sh
 pushd ./bitcoin
@@ -151,26 +151,26 @@ popd
 
 ### macOS codesigner only: Create detached macOS signatures (assuming [signapple](https://github.com/achow101/signapple/) is installed and up to date with master branch)
 
-    tar xf bitcoin-osx-unsigned.tar.gz
+    tar xf mateable-osx-unsigned.tar.gz
     ./detached-sig-create.sh /path/to/codesign.p12
     Enter the keychain password and authorize the signature
     signature-osx.tar.gz will be created
 
 ### Windows codesigner only: Create detached Windows signatures
 
-    tar xf bitcoin-win-unsigned.tar.gz
+    tar xf mateable-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 ### Windows and macOS codesigners only: test code signatures
 It is advised to test that the code signature attaches properly prior to tagging by performing the `guix-codesign` step.
-However if this is done, once the release has been tagged in the bitcoin-detached-sigs repo, the `guix-codesign` step must be performed again in order for the guix attestation to be valid when compared against the attestations of non-codesigner builds.
+However if this is done, once the release has been tagged in the mateable-detached-sigs repo, the `guix-codesign` step must be performed again in order for the guix attestation to be valid when compared against the attestations of non-codesigner builds.
 
 ### Windows and macOS codesigners only: Commit the detached codesign payloads
 
 ```sh
-pushd ./bitcoin-detached-sigs
+pushd ./mateable-detached-sigs
 # checkout the appropriate branch for this release series
 rm -rf ./*
 tar xf signature-osx.tar.gz
@@ -185,7 +185,7 @@ popd
 ### Non-codesigners: wait for Windows and macOS detached signatures
 
 - Once the Windows and macOS builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [bitcoin-detached-sigs](https://github.com/bitcoin-core/bitcoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [mateable-detached-sigs](https://github.com/mateable-core/mateable-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 ### Create the codesigned build outputs
 
@@ -215,7 +215,7 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 ```
 
 
-- Upload to the bitcoincore.org server (`/var/www/bin/bitcoin-core-${VERSION}/`):
+- Upload to the bitcoincore.org server (`/var/www/bin/mateable-core-${VERSION}/`):
     1. The contents of each `./bitcoin/guix-build-${VERSION}/output/${HOST}/` directory, except for
        `*-debug*` files.
 
@@ -232,17 +232,17 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
        nor put them in the torrent*.
 
        ```sh
-       find guix-build-${VERSION}/output/ -maxdepth 2 -type f -not -name "SHA256SUMS.part" -and -not -name "*debug*" -exec scp {} user@bitcoincore.org:/var/www/bin/bitcoin-core-${VERSION} \;
+       find guix-build-${VERSION}/output/ -maxdepth 2 -type f -not -name "SHA256SUMS.part" -and -not -name "*debug*" -exec scp {} user@bitcoincore.org:/var/www/bin/mateable-core-${VERSION} \;
        ```
 
     2. The `SHA256SUMS` file
 
     3. The `SHA256SUMS.asc` combined signature file you just created
 
-- Create a torrent of the `/var/www/bin/bitcoin-core-${VERSION}` directory such
-  that at the top level there is only one file: the `bitcoin-core-${VERSION}`
+- Create a torrent of the `/var/www/bin/mateable-core-${VERSION}` directory such
+  that at the top level there is only one file: the `mateable-core-${VERSION}`
   directory containing everything else. Name the torrent
-  `bitcoin-${VERSION}.torrent` (note that there is no `-core-` in this name).
+  `mateable-${VERSION}.torrent` (note that there is no `-core-` in this name).
 
   Optionally help seed this torrent. To get the `magnet:` URI use:
 
@@ -260,7 +260,7 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
   - bitcoincore.org blog post
 
   - bitcoincore.org maintained versions update:
-    [table](https://github.com/bitcoin-core/bitcoincore.org/commits/master/_includes/posts/maintenance-table.md)
+    [table](https://github.com/mateable-core/bitcoincore.org/commits/master/_includes/posts/maintenance-table.md)
 
   - Delete post-EOL [release branches](https://github.com/bitcoin/bitcoin/branches/all) and create a tag `v${branch_name}-final`.
 
@@ -270,21 +270,21 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
       - Install [golang](https://golang.org/doc/install)
 
-      - Install the new Bitcoin Core release
+      - Install the new Mateable Core release
 
-      - Run bitcoind on regtest
+      - Run mateabled on regtest
 
-      - Clone the [bitcoincore.org repository](https://github.com/bitcoin-core/bitcoincore.org)
+      - Clone the [bitcoincore.org repository](https://github.com/mateable-core/bitcoincore.org)
 
-      - Run: `go run generate.go` while being in `contrib/doc-gen` folder, and with bitcoin-cli in PATH
+      - Run: `go run generate.go` while being in `contrib/doc-gen` folder, and with mateable-cli in PATH
 
       - Add the generated files to git
 
   - Update packaging repo
 
-      - Push the flatpak to flathub, e.g. https://github.com/flathub/org.bitcoincore.bitcoin-qt/pull/2
+      - Push the flatpak to flathub, e.g. https://github.com/flathub/org.bitcoincore.mateable-qt/pull/2
 
-      - Push the snap, see https://github.com/bitcoin-core/packaging/blob/master/snap/build.md
+      - Push the snap, see https://github.com/mateable-core/packaging/blob/master/snap/build.md
 
   - This repo
 
@@ -294,11 +294,11 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
 - Announce the release:
 
-  - bitcoin-dev and bitcoin-core-dev mailing list
+  - mateable-dev and mateable-core-dev mailing list
 
-  - Bitcoin Core announcements list https://bitcoincore.org/en/list/announcements/join/
+  - Mateable Core announcements list https://bitcoincore.org/en/list/announcements/join/
 
-  - Bitcoin Core Twitter https://twitter.com/bitcoincoreorg
+  - Mateable Core Twitter https://twitter.com/bitcoincoreorg
 
   - Celebrate
 

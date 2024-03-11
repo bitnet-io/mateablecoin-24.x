@@ -1,9 +1,9 @@
-// Copyright (c) 2022 The Bitcoin Core developers
+// Copyright (c) 2022 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_NODE_MEMPOOL_ARGS_H
-#define BITCOIN_NODE_MEMPOOL_ARGS_H
+#ifndef MATEABLE_NODE_MEMPOOL_ARGS_H
+#define MATEABLE_NODE_MEMPOOL_ARGS_H
 
 #include <optional>
 
@@ -24,4 +24,4 @@ struct MemPoolOptions;
 [[nodiscard]] std::optional<bilingual_str> ApplyArgsManOptions(const ArgsManager& argsman, const CChainParams& chainparams, kernel::MemPoolOptions& mempool_opts);
 
 
-#endif // BITCOIN_NODE_MEMPOOL_ARGS_H
+#endif // MATEABLE_NODE_MEMPOOL_ARGS_H

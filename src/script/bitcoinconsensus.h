@@ -1,15 +1,15 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2020 The Bitcoin Core developers
+// Copyright (c) 2009-2020 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_SCRIPT_BITCOINCONSENSUS_H
-#define BITCOIN_SCRIPT_BITCOINCONSENSUS_H
+#ifndef MATEABLE_SCRIPT_MATEABLECONSENSUS_H
+#define MATEABLE_SCRIPT_MATEABLECONSENSUS_H
 
 #include <stdint.h>
 
-#if defined(BUILD_BITCOIN_INTERNAL) && defined(HAVE_CONFIG_H)
-#include <config/bitcoin-config.h>
+#if defined(BUILD_MATEABLE_INTERNAL) && defined(HAVE_CONFIG_H)
+#include <config/mateable-config.h>
   #if defined(_WIN32)
     #if defined(HAVE_DLLEXPORT_ATTRIBUTE)
       #define EXPORT_SYMBOL __declspec(dllexport)
@@ -19,7 +19,7 @@
   #elif defined(HAVE_DEFAULT_VISIBILITY_ATTRIBUTE)
     #define EXPORT_SYMBOL __attribute__ ((visibility ("default")))
   #endif
-#elif defined(MSC_VER) && !defined(STATIC_LIBBITCOINCONSENSUS)
+#elif defined(MSC_VER) && !defined(STATIC_LIBMATEABLECONSENSUS)
   #define EXPORT_SYMBOL __declspec(dllimport)
 #endif
 
@@ -31,7 +31,7 @@
 extern "C" {
 #endif
 
-#define BITCOINCONSENSUS_API_VER 1
+#define MATEABLECONSENSUS_API_VER 1
 
 typedef enum bitcoinconsensus_error_t
 {
@@ -78,4 +78,4 @@ EXPORT_SYMBOL unsigned int bitcoinconsensus_version();
 
 #undef EXPORT_SYMBOL
 
-#endif // BITCOIN_SCRIPT_BITCOINCONSENSUS_H
+#endif // MATEABLE_SCRIPT_MATEABLECONSENSUS_H

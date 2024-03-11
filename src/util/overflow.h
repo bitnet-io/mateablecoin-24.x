@@ -1,9 +1,9 @@
-// Copyright (c) 2021 The Bitcoin Core developers
+// Copyright (c) 2021 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_UTIL_OVERFLOW_H
-#define BITCOIN_UTIL_OVERFLOW_H
+#ifndef MATEABLE_UTIL_OVERFLOW_H
+#define MATEABLE_UTIL_OVERFLOW_H
 
 #include <limits>
 #include <optional>
@@ -47,4 +47,4 @@ template <class T>
     return i + j;
 }
 
-#endif // BITCOIN_UTIL_OVERFLOW_H
+#endif // MATEABLE_UTIL_OVERFLOW_H

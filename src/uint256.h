@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2021 The Bitcoin Core developers
+// Copyright (c) 2009-2021 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_UINT256_H
-#define BITCOIN_UINT256_H
+#ifndef MATEABLE_UINT256_H
+#define MATEABLE_UINT256_H
 
 #include <crypto/common.h>
 #include <span.h>
@@ -170,4 +170,4 @@ public:
     }
 };
 
-#endif // BITCOIN_UINT256_H
+#endif // MATEABLE_UINT256_H

@@ -1,10 +1,10 @@
-Bitcoin Core version 0.17.1 is now available from:
+Mateable Core version 0.17.1 is now available from:
 
-  <https://bitcoincore.org/bin/bitcoin-core-0.17.1/>
+  <https://bitcoincore.org/bin/mateable-core-0.17.1/>
 
 or through BitTorrent:
 
-    magnet:?xt=urn:btih:c56c87ccfaa8e6fbccc90d549121e61efd97cb6f&dn=bitcoin-core-0.17.1&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fexplodie.org%3A6969    
+    magnet:?xt=urn:btih:c56c87ccfaa8e6fbccc90d549121e61efd97cb6f&dn=mateable-core-0.17.1&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fexplodie.org%3A6969    
 
 This is a new minor version release, with various bugfixes
 and performance improvements, as well as updated translations.
@@ -22,8 +22,8 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
-or `bitcoind`/`bitcoin-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Mateable-Qt` (on Mac)
+or `mateabled`/`mateable-qt` (on Linux).
 
 If your node has a txindex, the txindex db will be migrated the first time you run 0.17.0 or newer, which may take up to a few hours. Your node will not be functional until this migration completes.
 
@@ -50,10 +50,10 @@ processing the entire blockchain.
 Compatibility
 ==============
 
-Bitcoin Core is extensively tested on multiple operating systems using
+Mateable Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.10+, and Windows 7 and newer (Windows XP is not supported).
 
-Bitcoin Core should also work on most other Unix-like systems but is not
+Mateable Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 From 0.17.0 onwards macOS <10.10 is no longer supported. 0.17.0 is built using Qt 5.9.x, which doesn't
@@ -112,7 +112,7 @@ confusion.
 
 ### Build system
 - #14647 `7edebed` Remove illegal spacing in darwin.mk (ch4ot1c)
-- #14698 `ec71f06` Add bitcoin-tx.exe into Windows installer (ken2812221)
+- #14698 `ec71f06` Add mateable-tx.exe into Windows installer (ken2812221)
 
 ### Tests and QA
 - #13965 `29899ec` Fix extended functional tests fail (ken2812221)

@@ -1,5 +1,5 @@
 #!/bin/sh
-# Copyright (c) 2017-2021 The Bitcoin Core developers
+# Copyright (c) 2017-2021 The Mateable Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -253,7 +253,7 @@ echo
 echo "db4 build complete."
 echo
 # shellcheck disable=SC2016
-echo 'When compiling bitcoind, run `./configure` in the following way:'
+echo 'When compiling mateabled, run `./configure` in the following way:'
 echo
 echo "  export BDB_PREFIX='${BDB_PREFIX}'"
 # shellcheck disable=SC2016

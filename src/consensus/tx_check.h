@@ -1,9 +1,9 @@
-// Copyright (c) 2017-2019 The Bitcoin Core developers
+// Copyright (c) 2017-2019 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CONSENSUS_TX_CHECK_H
-#define BITCOIN_CONSENSUS_TX_CHECK_H
+#ifndef MATEABLE_CONSENSUS_TX_CHECK_H
+#define MATEABLE_CONSENSUS_TX_CHECK_H
 
 /**
  * Context-independent transaction checking code that can be called outside the
@@ -17,4 +17,4 @@ class TxValidationState;
 
 bool CheckTransaction(const CTransaction& tx, TxValidationState& state);
 
-#endif // BITCOIN_CONSENSUS_TX_CHECK_H
+#endif // MATEABLE_CONSENSUS_TX_CHECK_H

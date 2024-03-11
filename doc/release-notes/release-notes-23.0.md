@@ -1,9 +1,9 @@
 23.0 Release Notes
 ==================
 
-Bitcoin Core version 23.0 is now available from:
+Mateable Core version 23.0 is now available from:
 
-  <https://bitcoincore.org/bin/bitcoin-core-23.0/>
+  <https://bitcoincore.org/bin/mateable-core-23.0/>
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
@@ -21,20 +21,20 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
-installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
-or `bitcoind`/`bitcoin-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Mateable-Qt` (on Mac)
+or `mateabled`/`mateable-qt` (on Linux).
 
-Upgrading directly from a version of Bitcoin Core that has reached its EOL is
+Upgrading directly from a version of Mateable Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
-wallet versions of Bitcoin Core are generally supported.
+wallet versions of Mateable Core are generally supported.
 
 Compatibility
 ==============
 
-Bitcoin Core is supported and extensively tested on operating systems
-using the Linux kernel, macOS 10.15+, and Windows 7 and newer.  Bitcoin
+Mateable Core is supported and extensively tested on operating systems
+using the Linux kernel, macOS 10.15+, and Windows 7 and newer.  Mateable
 Core should also work on most other Unix-like systems but is not as
-frequently tested on them.  It is not recommended to use Bitcoin Core on
+frequently tested on them.  It is not recommended to use Mateable Core on
 unsupported systems.
 
 Notable changes
@@ -43,11 +43,11 @@ Notable changes
 P2P and network changes
 -----------------------
 
-- A bitcoind node will no longer rumour addresses to inbound peers by default.
+- A mateabled node will no longer rumour addresses to inbound peers by default.
   They will become eligible for address gossip after sending an ADDR, ADDRV2,
   or GETADDR message. (#21528)
 
-- Before this release, Bitcoin Core had a strong preference to try to connect only to peers that listen on port 8333. As a result of that, Bitcoin nodes listening on non-standard ports would likely not get any Bitcoin Core peers connecting to them. This preference has been removed. (#23542)
+- Before this release, Mateable Core had a strong preference to try to connect only to peers that listen on port 8333. As a result of that, Mateable nodes listening on non-standard ports would likely not get any Mateable Core peers connecting to them. This preference has been removed. (#23542)
 
 - Full support has been added for the CJDNS network. See the new option `-cjdnsreachable` and [doc/cjdns.md](https://github.com/bitcoin/bitcoin/tree/23.x/doc/cjdns.md) (#23077)
 
@@ -67,7 +67,7 @@ Otherwise, please use the `rescanblockchain` RPC to trigger a rescan. (#23123)
 Tracepoints and Userspace, Statically Defined Tracing support
 -------------------------------------------------------------
 
-Bitcoin Core release binaries for Linux now include experimental tracepoints which
+Mateable Core release binaries for Linux now include experimental tracepoints which
 act as an interface for process-internal events. These can be used for review,
 debugging, monitoring, and more. The tracepoint API is semi-stable. While the API
 is tested, process internals might change between releases requiring changes to the
@@ -131,7 +131,7 @@ Files
 -----
 
 * On startup, the list of banned hosts and networks (via `setban` RPC) in
-  `banlist.dat` is ignored and only `banlist.json` is considered. Bitcoin Core
+  `banlist.dat` is ignored and only `banlist.json` is considered. Mateable Core
   version 22.x is the only version that can read `banlist.dat` and also write
   it to `banlist.json`. If `banlist.json` already exists, version 22.x will not
   try to translate the `banlist.dat` into json. After an upgrade, `listbanned`
@@ -163,7 +163,7 @@ Tools and Utilities
 
 - CLI `-addrinfo` now returns a single field for the number of `onion` addresses
   known to the node instead of separate `torv2` and `torv3` fields, as support
-  for Tor V2 addresses was removed from Bitcoin Core in 22.0. (#22544)
+  for Tor V2 addresses was removed from Mateable Core in 22.0. (#22544)
 
 Wallet
 ------
@@ -254,8 +254,8 @@ Thanks to everyone who directly contributed to this release:
 - Arnab Sen
 - Ben Woosley
 - benthecarman
-- Bitcoin Hodler
-- BitcoinTsunami
+- Mateable Hodler
+- MateableTsunami
 - brianddk
 - Bruno Garcia
 - CallMeMisterOwl

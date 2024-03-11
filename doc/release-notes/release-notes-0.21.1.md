@@ -1,9 +1,9 @@
 0.21.1 Release Notes
 ====================
 
-Bitcoin Core version 0.21.1 is now available from:
+Mateable Core version 0.21.1 is now available from:
 
-  <https://bitcoincore.org/bin/bitcoin-core-0.21.1/>
+  <https://bitcoincore.org/bin/mateable-core-0.21.1/>
 
 This minor release includes various bug fixes and performance
 improvements, as well as updated translations.
@@ -21,24 +21,24 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
-installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
-or `bitcoind`/`bitcoin-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Mateable-Qt` (on Mac)
+or `mateabled`/`mateable-qt` (on Linux).
 
-Upgrading directly from a version of Bitcoin Core that has reached its EOL is
+Upgrading directly from a version of Mateable Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
-wallet versions of Bitcoin Core are generally supported.
+wallet versions of Mateable Core are generally supported.
 
 Compatibility
 ==============
 
-Bitcoin Core is supported and extensively tested on operating systems
-using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Bitcoin
+Mateable Core is supported and extensively tested on operating systems
+using the Linux kernel, macOS 10.12+, and Windows 7 and newer.  Mateable
 Core should also work on most other Unix-like systems but is not as
-frequently tested on them.  It is not recommended to use Bitcoin Core on
+frequently tested on them.  It is not recommended to use Mateable Core on
 unsupported systems.
 
-From Bitcoin Core 0.20.0 onwards, macOS versions earlier than 10.12 are no
-longer supported. Additionally, Bitcoin Core does not yet change appearance
+From Mateable Core 0.20.0 onwards, macOS versions earlier than 10.12 are no
+longer supported. Additionally, Mateable Core does not yet change appearance
 when macOS "dark mode" is activated.
 
 Notable changes
@@ -80,7 +80,7 @@ payments to such addresses are not secure until taproot activates.
 It also includes the ability to relay and mine taproot transactions
 after activation.  Beyond those two basic capabilities, this release
 does not include any code that allows anyone to directly use taproot.
-The addition of taproot-related features to Bitcoin Core's wallet is
+The addition of taproot-related features to Mateable Core's wallet is
 expected in later releases once taproot activation is assured.
 
 All users, businesses, and miners are encouraged to upgrade to this
@@ -109,8 +109,8 @@ For more information about taproot, please see the following resources:
   - [BIP342 Validation of Taproot scripts](https://github.com/bitcoin/bips/blob/master/bip-0342.mediawiki)
 
 - Popular articles;
-  - [Taproot Is Coming: What It Is, and How It Will Benefit Bitcoin](https://bitcoinmagazine.com/technical/taproot-coming-what-it-and-how-it-will-benefit-bitcoin)
-  - [What do Schnorr Signatures Mean for Bitcoin?](https://academy.binance.com/en/articles/what-do-schnorr-signatures-mean-for-bitcoin)
+  - [Taproot Is Coming: What It Is, and How It Will Benefit Mateable](https://bitcoinmagazine.com/technical/taproot-coming-what-it-and-how-it-will-benefit-bitcoin)
+  - [What do Schnorr Signatures Mean for Mateable?](https://academy.binance.com/en/articles/what-do-schnorr-signatures-mean-for-bitcoin)
   - [The Schnorr Signature & Taproot Softfork Proposal](https://blog.bitmex.com/the-schnorr-signature-taproot-softfork-proposal/)
 
 - Development history overview

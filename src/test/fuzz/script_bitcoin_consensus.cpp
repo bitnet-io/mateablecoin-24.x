@@ -1,4 +1,4 @@
-// Copyright (c) 2020 The Bitcoin Core developers
+// Copyright (c) 2020 The Mateable Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -22,7 +22,7 @@ FUZZ_TARGET(script_bitcoin_consensus)
     bitcoinconsensus_error* err_p = fuzzed_data_provider.ConsumeBool() ? &err : nullptr;
     const unsigned int n_in = fuzzed_data_provider.ConsumeIntegral<unsigned int>();
     const unsigned int flags = fuzzed_data_provider.ConsumeIntegral<unsigned int>();
-    assert(bitcoinconsensus_version() == BITCOINCONSENSUS_API_VER);
+    assert(bitcoinconsensus_version() == MATEABLECONSENSUS_API_VER);
     if ((flags & SCRIPT_VERIFY_WITNESS) != 0 && (flags & SCRIPT_VERIFY_P2SH) == 0) {
         return;
     }
